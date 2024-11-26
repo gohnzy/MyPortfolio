@@ -30,7 +30,12 @@ const Middleware = () => {
 				}
 			}
 		};
-	});
+		checkStatus();
+	}, []);
+	if (maintenanceState === null) {
+		// Si l'état de maintenance est encore en cours de vérification, on peut afficher un loader ou rien
+		return <div>Loading...</div>;
+	}
 	return maintenanceState ? <Maintenance /> : <Homepage />;
 };
 
