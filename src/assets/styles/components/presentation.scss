@@ -1,0 +1,33 @@
+@import '../index';
+
+#presentation {
+	display: flex;
+	flex-wrap: wrap;
+
+	& h3 {
+		margin: 50px 0 0 0;
+	}
+
+	& #presentation-core {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 6%;
+		& img {
+			width: fit-content;
+			height: 300px;
+		}
+		& p {
+			flex-wrap: wrap;
+			width: 70%;
+			padding: 50px;
+			box-sizing: border-box;
+			color: $contrast-red;
+			text-align: center;
+		}
+	}
+
+	& svg {
+		margin: auto;
+	}
+}

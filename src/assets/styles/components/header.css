@@ -1,0 +1,266 @@
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  margin: auto;
+  width: 80%;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+section {
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+h3 {
+  color: #a94676;
+  font-family: "Oxanium", sans-serif;
+  font-size: 32px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+h4 {
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #b2bcff;
+}
+
+h5 {
+  margin: 0;
+  color: #71020c;
+}
+
+h6 {
+  margin: 0;
+  color: #a94676;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+header #title {
+  width: 25%;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2%;
+}
+header #title:hover {
+  cursor: pointer;
+}
+header #title:hover h1::after {
+  transition: 0.2s;
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+}
+header #title:not(:hover) h1::after {
+  transition: 0.2s;
+}
+header #title * {
+  margin: 0;
+}
+header #title h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: start;
+  font-family: "Oxanium", sans-serif;
+  color: #71020c;
+  font-weight: 500;
+  text-shadow: 2px 4px 10px rgba(113, 2, 12, 0.2);
+}
+header #title h1::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background-color: #a94676;
+}
+header #title p {
+  width: 100%;
+  color: #a94676;
+}
+header nav {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+header nav:hover {
+  height: 400px;
+}
+header nav #arrow-animation {
+  top: 103px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid #71020c;
+  position: absolute;
+}
+header nav:hover #arrow-animation {
+  width: 100px;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 2px solid #a94676;
+  transition: 0.1s ease-in-out;
+}
+header nav h2 {
+  font-family: "Oxanium", sans-serif;
+  color: #71020c;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0px;
+  margin: 0;
+  position: relative;
+  font-weight: 500;
+}
+header nav h2:hover {
+  cursor: default;
+}
+header nav h2::before {
+  content: "";
+  width: 10vw;
+  height: 2px;
+  background-color: #71020c;
+  display: block;
+  box-shadow: -2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+  position: absolute;
+  left: 55px;
+  pointer-events: none;
+}
+header nav h2::after {
+  content: "";
+  width: 10vw;
+  height: 2px;
+  background-color: #71020c;
+  display: block;
+  box-shadow: -2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+  position: absolute;
+  right: 55px;
+  pointer-events: none;
+}
+header nav #menu {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  color: #71020c;
+  font-size: 18px;
+  position: absolute;
+  width: 14vw;
+  top: 145px;
+  box-sizing: border-box;
+  text-align: center;
+}
+header nav #menu *::after {
+  content: "";
+  width: 0px;
+  display: block;
+  background-color: #a94676;
+  margin: auto;
+  height: 2px;
+}
+header nav #menu *:hover {
+  color: #a94676;
+  cursor: pointer;
+  text-shadow: 2px 4px 10px rgba(169, 70, 118, 0.2);
+  transition: 0.2s ease-in-out;
+}
+header nav #menu *:hover::after {
+  width: 100%;
+  transition: 0.1s;
+}
+header nav #menu *:not(:hover)::after {
+  transition: 0.1s;
+  width: 0px;
+}
+header nav #menu *:not(:hover) {
+  transition: 0.2s ease-in-out;
+}
+header nav:hover #menu {
+  height: 120px;
+  transition: 0.2s;
+}
+header nav:not(:hover) #arrow-animation {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 10px solid #a94676;
+  transition: 0.15s ease-in-out;
+}
+header nav:hover h2::before {
+  width: 5vw;
+  left: 150px;
+  transform: rotate(90deg) translateX(100px);
+  transition: 0.15s ease-in-out;
+  box-shadow: -2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+}
+header nav:not(:hover) h2::before {
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 5px 5px 1px rgba(113, 2, 12, 0.05);
+}
+header nav:hover h2::after {
+  width: 5vw;
+  right: 150px;
+  transform: rotate(-90deg) translateX(-100px);
+  transition: 0.15s ease-in-out;
+  box-shadow: 2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+}
+header nav:not(:hover) h2::after {
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 5px 5px 1px rgba(113, 2, 12, 0.05);
+}
+header #links {
+  width: 25%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 30%;
+}
+header #links a {
+  width: 32px;
+  height: 32px;
+}
+header #links a svg {
+  width: 32px;
+  height: 32px;
+  color: #71020c;
+}
+header #links a:hover svg {
+  color: #a94676;
+}/*# sourceMappingURL=header.css.map */

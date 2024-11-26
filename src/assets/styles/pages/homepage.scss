@@ -1,0 +1,8 @@
+@import '../index';
+main {
+	padding: 2em;
+	& img {
+		width: 100px;
+		height: 100px;
+	}
+}

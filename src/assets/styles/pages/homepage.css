@@ -1,0 +1,16 @@
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  margin: auto;
+  width: 80%;
+}
+
+main {
+  padding: 2em;
+}
+main img {
+  width: 100px;
+  height: 100px;
+}/*# sourceMappingURL=homepage.css.map */
