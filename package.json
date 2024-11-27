@@ -31,7 +31,7 @@
 	},
 	"scripts": {
 		"start": "node back/index.js",
-		"build": "react-scripts build",
+		"build": "EXTEND_ESLINT=false react-scripts build",
 		"heroku-postbuild": "npm run build",
 		"dev": "concurrently \"npm run react\" \"npm run backend\"",
 		"react": "react-scripts start",
