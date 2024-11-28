@@ -20,6 +20,7 @@
 		"concurrently": "^9.1.0",
 		"cors": "^2.8.5",
 		"cross-env": "^7.0.3",
+		"dotenv": "^16.4.5",
 		"eslint-config-react-app": "^7.0.1",
 		"eslint-plugin-react": "^7.37.2",
 		"express": "^4.21.1",
@@ -36,7 +37,8 @@
 	"scripts": {
 		"start": "node back/index.js",
 		"build": "cross-env EXTEND_ESLINT=false react-scripts build",
-		"heroku-postbuild": "npm run build",
+		"heroku-prebuild": "CI=false",
+		"heroku-postbuild": "CI=false npm run build",
 		"dev": "concurrently \"npm run react\" \"npm run backend\"",
 		"react": "react-scripts start",
 		"backend": "nodemon back/index.js"
