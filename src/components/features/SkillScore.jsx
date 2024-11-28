@@ -14,6 +14,7 @@ const SkillScore = ({ level = 0, position = 0 }) => {
 
 	// Observer de visibilité
 	useEffect(() => {
+		const currentRef = elementRef.current;
 		const observerCallback = entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
@@ -30,11 +31,11 @@ const SkillScore = ({ level = 0, position = 0 }) => {
 			observerCallback,
 			observerOptions,
 		);
-		if (elementRef.current) observer.observe(elementRef.current);
+		if (currentRef) observer.observe(currentRef);
 
 		// Nettoyage
 		return () => {
-			if (elementRef.current) observer.unobserve(elementRef.current);
+			if (currentRef) observer.unobserve(currentRef);
 		};
 	}, []);
 

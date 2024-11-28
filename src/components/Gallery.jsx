@@ -1,4 +1,4 @@
-import Project from './features/Project';
+// import Project from './features/Project';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
@@ -51,7 +51,7 @@ const Gallery = () => {
 			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
 				Mes derniers projets :
 			</h3>
-			{projectsList.length == 0 ? (
+			{projectsList.length === 0 ? (
 				<div id="no-project">
 					<h4>
 						No projects found in the gallery, try fetching projects from
