@@ -7,6 +7,7 @@
 		"npm": "6.x"
 	},
 	"dependencies": {
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@fortawesome/fontawesome-svg-core": "^6.7.1",
 		"@fortawesome/free-brands-svg-icons": "^6.7.1",
 		"@fortawesome/free-regular-svg-icons": "^6.7.1",
@@ -18,6 +19,9 @@
 		"axios": "^1.7.8",
 		"concurrently": "^9.1.0",
 		"cors": "^2.8.5",
+		"cross-env": "^7.0.3",
+		"eslint-config-react-app": "^7.0.1",
+		"eslint-plugin-react": "^7.37.2",
 		"express": "^4.21.1",
 		"pg": "^8.13.1",
 		"react": "^18.3.1",
@@ -27,12 +31,11 @@
 		"react-scripts": "5.0.1",
 		"react-scroll": "^1.9.0",
 		"recharts": "^2.13.3",
-		"web-vitals": "^2.1.4",
-		"@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
 		"start": "node back/index.js",
-		"build": "EXTEND_ESLINT=false react-scripts build",
+		"build": "cross-env EXTEND_ESLINT=false react-scripts build",
 		"heroku-postbuild": "npm run build",
 		"dev": "concurrently \"npm run react\" \"npm run backend\"",
 		"react": "react-scripts start",
@@ -55,10 +58,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"eslint": "^8.57.1",
-		"eslint-config-react-app": "^7.0.1",
-		"eslint-plugin-react": "^7.37.2"
 	}
 }
