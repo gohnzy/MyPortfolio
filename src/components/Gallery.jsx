@@ -15,8 +15,9 @@ const Gallery = () => {
 		};
 		try {
 			const response = await axios.get(API, requestData, { headers });
+			console.log(response);
 
-			setProjectsList(response.data.data.rows);
+			setProjectsList(response.rows);
 		} catch (error) {
 			console.error(error);
 			return error;

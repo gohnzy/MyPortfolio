@@ -2,6 +2,15 @@ const express = require('express');
 const router = express.Router();
 const database = require('../Database/connection');
 
+database
+	.query('SELECT * FROM projects')
+	.then(res => {
+		console.log('Success', res);
+	})
+	.catch(error => {
+		console.error('Error', error);
+	});
+
 router.get('/', async (req, res) => {
 	try {
 		const server_ip = await database.query(
