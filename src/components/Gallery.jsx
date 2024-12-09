@@ -8,16 +8,17 @@ const Gallery = () => {
 	const [isHighlighted, setIsHighlighted] = useState(false);
 	const elementRef = useRef();
 	const [projectsList, setProjectsList] = useState([]);
-	const gatherProjects = async requestData => {
+	const gatherProjects = async () => {
 		const API = 'http://localhost:1000/api/projects';
 		const headers = {
 			'Content-Type': 'application/json',
 		};
 		try {
-			const response = await axios.get(API, requestData, { headers });
+			const response = await axios.get(API, { headers });
 			console.log(response);
 
-			setProjectsList(response.rows);
+			setProjectsList(response.data.data.rows);
+			console.log(projectsList);
 		} catch (error) {
 			console.error(error);
 			return error;
