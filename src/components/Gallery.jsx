@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
 import '../assets/styles/components/gallery.css';
+import Project from './features/Project';
 
 const Gallery = () => {
 	const [isHighlighted, setIsHighlighted] = useState(false);
@@ -64,7 +65,7 @@ const Gallery = () => {
 			) : (
 				<div id="projects-gallery">
 					{projectsList.map((project, index) => (
-						<article key={index}>{project.name}</article>
+						<Project id={index} name={project} />
 					))}
 				</div>
 			)}
