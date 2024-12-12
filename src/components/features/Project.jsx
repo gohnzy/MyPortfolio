@@ -1,5 +1,9 @@
-const Project = ({ index, name }) => {
-	return <article id={index}>{name.name}</article>;
+const Project = ({ id, project }) => {
+	return (
+		<article className="project" id={id}>
+			{project.name}
+		</article>
+	);
 };
 
 export default Project;
