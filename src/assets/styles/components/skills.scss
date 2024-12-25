@@ -6,23 +6,19 @@
 	grid-template-rows: 14% 86%;
 	column-gap: 6%;
 	padding-top: 50px;
+	margin-top: 30px;
 	& h3 {
 		grid-area: 1 / 1 / 2 / 2;
 		height: 100%;
-		// padding: 15px 0 0 15px;
 		margin: auto 0;
 	}
 	.category {
-		border-radius: 15px;
+		@include Card;
 		display: grid;
 		grid-template-columns: 64% 30%;
 		grid-template-rows: 10% 90%;
 		column-gap: 6%;
 		width: fit-content;
-		background-color: rgba($color: $venetian-red, $alpha: 1);
-		box-shadow: 3px 3px 10px 0 rgba($color: #000000, $alpha: 0.2);
-		padding: 30px;
-		box-sizing: border-box;
 		margin: auto;
 		height: 100%;
 		width: 100%;

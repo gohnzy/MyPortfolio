@@ -5,7 +5,21 @@ import Project from './features/Project';
 
 const Gallery = () => {
 	const [isHighlighted, setIsHighlighted] = useState(false);
+	const [activeProject, setActiveProject] = useState(0);
 	const elementRef = useRef();
+
+	const changeProject = id => {
+		if (activeProject === 0) {
+			setActiveProject(projectList.length - 1);
+		} else if (activeProject === projectList.length - 1) {
+			setActiveProject(0);
+		} else if (id === 'left') {
+			setActiveProject(prev => Math.max(0, prev - 1));
+		} else if (id === 'right') {
+			setActiveProject(prev => prev + 1);
+		}
+		console.log(activeProject);
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -35,11 +49,25 @@ const Gallery = () => {
 			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
 				Mes derniers projets :
 			</h3>
-
 			<div id="projects-gallery">
-				{projectList.map((project, index) => (
+				{/* {projectList.map((project, index) => (
 					<Project key={index} id={index} project={project} />
-				))}
+				))} */}
+				<i
+					className="fa-solid fa-chevron-left"
+					id="left"
+					onClick={e => changeProject(e.target.id)}
+				></i>
+				<Project
+					key={'t'}
+					id={'t'}
+					project={projectList[activeProject]}
+				></Project>
+				<i
+					className="fa-solid fa-chevron-right"
+					id="right"
+					onClick={e => changeProject(e.target.id)}
+				></i>
 			</div>
 		</section>
 	);

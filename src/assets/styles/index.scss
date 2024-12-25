@@ -4,16 +4,24 @@ $blue: #b2bcff;
 $first-font: 'Oxanium', sans-serif;
 $second-font: 'Kanit', sans-serif;
 
+@mixin Card {
+	border-radius: 15px;
+	background-color: $venetian-red;
+	box-shadow: 3px 3px 10px 0 rgba($color: #000000, $alpha: 0.2);
+	padding: 30px;
+	box-sizing: border-box;
+}
+
 * {
 	font-family: $second-font;
 }
 
 body {
 	margin: auto;
-	width: 80%;
+	width: 100%;
 }
 main {
-	width: 80%;
+	width: 60%;
 	margin: auto;
 }
 section {

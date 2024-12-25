@@ -109,33 +109,23 @@ h6 {
   color: #a94676;
 }
 
-#gallery {
-  padding-top: 50px;
-}
-#gallery #projects-gallery {
+footer {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
-  height: 600px;
+  gap: 60%;
+  background-color: #71020c;
   width: 100%;
-  overflow: hidden;
+  height: 200px;
 }
-#gallery #projects-gallery article {
-  width: 600px;
-  height: 70%;
-}
-#gallery #projects-gallery i {
-  font-size: 64px;
+footer img {
   width: 50px;
-  height: -moz-fit-content;
-  height: fit-content;
-  color: #71020c;
 }
-#gallery #projects-gallery i:hover {
+footer img:hover {
   cursor: pointer;
-  color: #a94676;
-  transform: scale(1.1);
-  transition: 0.1s ease-in-out;
-}/*# sourceMappingURL=gallery.css.map */
+}
+footer p {
+  font-size: 12px;
+  color: white;
+}/*# sourceMappingURL=footer.css.map */

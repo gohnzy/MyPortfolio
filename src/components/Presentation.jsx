@@ -46,29 +46,7 @@ const Presentation = () => {
 					réellement découvert que bien trop tard. Enfin, il n'est jamais
 					vraiment "trop tard", n'est-ce pas ?! J'ai donc décidé de sauter le
 					pas et me voilà, fièrement diplôme de la formation "Développeur
-					d'application web" et prêt à en décoder ! Hello, moi c'est Greg(ory),
-					26 ans et toutes mes dents. Après 4 ans dans le monde de l'automobile
-					en tant que commercial, j'ai décidé de me reconvertir en tant que
-					développeur (gros retournement de veste en est-il). C'est un univers
-					qui m'a toujours attiré mais que je n'ai réellement découvert que bien
-					trop tard. Enfin, il n'est jamais vraiment "trop tard", n'est-ce pas
-					?! J'ai donc décidé de sauter le pas et me voilà, fièrement diplôme de
-					la formation "Développeur d'application web" et prêt à en décoder !
-					Hello, moi c'est Greg(ory), 26 ans et toutes mes dents. Après 4 ans
-					dans le monde de l'automobile en tant que commercial, j'ai décidé de
-					me reconvertir en tant que développeur (gros retournement de veste en
-					est-il). C'est un univers qui m'a toujours attiré mais que je n'ai
-					réellement découvert que bien trop tard. Enfin, il n'est jamais
-					vraiment "trop tard", n'est-ce pas ?! J'ai donc décidé de sauter le
-					pas et me voilà, fièrement diplôme de la formation "Développeur
-					d'application web" et prêt à en décoder ! Hello, moi c'est Greg(ory),
-					26 ans et toutes mes dents. Après 4 ans dans le monde de l'automobile
-					en tant que commercial, j'ai décidé de me reconvertir en tant que
-					développeur (gros retournement de veste en est-il). C'est un univers
-					qui m'a toujours attiré mais que je n'ai réellement découvert que bien
-					trop tard. Enfin, il n'est jamais vraiment "trop tard", n'est-ce pas
-					?! J'ai donc décidé de sauter le pas et me voilà, fièrement diplôme de
-					la formation "Développeur d'application web" et prêt à en décoder !
+					d'application web" et prêt à en décoder !
 				</p>
 			</div>
 		</section>
