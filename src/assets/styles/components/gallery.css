@@ -135,7 +135,10 @@ h6 {
 }
 #gallery #projects-gallery i:hover {
   cursor: pointer;
-  color: #a94676;
+  color: #b2bcff;
   transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
+#gallery #projects-gallery i:not(:hover) {
   transition: 0.1s ease-in-out;
 }/*# sourceMappingURL=gallery.css.map */

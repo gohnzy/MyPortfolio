@@ -4,11 +4,11 @@
 
 body {
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
 
 main {
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 
@@ -118,6 +118,7 @@ h6 {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2%;
 }
 .project #bg {
@@ -158,4 +159,16 @@ h6 {
 }
 .project ul {
   display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  gap: 35px;
+  padding-left: 0;
+}
+.project ul li {
+  list-style: none;
+  background-color: #b2bcff;
+  color: #a94676;
+  padding: 0px 10px;
+  border-radius: 5px;
 }/*# sourceMappingURL=project.css.map */

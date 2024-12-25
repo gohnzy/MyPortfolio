@@ -9,9 +9,9 @@ const Gallery = () => {
 	const elementRef = useRef();
 
 	const changeProject = id => {
-		if (activeProject === 0) {
+		if (activeProject === 0 && id === 'left') {
 			setActiveProject(projectList.length - 1);
-		} else if (activeProject === projectList.length - 1) {
+		} else if (activeProject === projectList.length - 1 && id === 'right') {
 			setActiveProject(0);
 		} else if (id === 'left') {
 			setActiveProject(prev => Math.max(0, prev - 1));
@@ -36,10 +36,8 @@ const Gallery = () => {
 			}
 		};
 
-		// Écouter l'événement de défilement
 		window.addEventListener('scroll', handleScroll);
 
-		// Nettoyer l'événement de défilement lorsque le composant est démonté
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
