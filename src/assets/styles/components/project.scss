@@ -16,8 +16,39 @@
 		background-color: $blue;
 		transition: 0.2s ease-in-out;
 		box-shadow: 3px 3px 10px 0 rgba($color: #000000, $alpha: 0.4);
+		color: $venetian-red;
+		& h4 {
+			color: $contrast-red;
+			text-shadow: 0;
+		}
 		& ul {
-			display: none;
+			animation: closeList 0.2s ease-in-out forwards;
+		}
+		& li {
+			animation: closeList 0.2s ease-in-out forwards;
+		}
+
+		@keyframes closeList {
+			0% {
+				
+			}
+			99% {
+				height: 0;
+			}
+			100% {
+				display: none;
+			}
+		}
+		
+		& h5 {
+			animation:tttt 0.15s ease 1s forwards;
+		}
+		@keyframes tttt {
+			from {
+			}
+			to {
+				opacity: 1;
+			}
 		}
 	}
 	&:not(:hover) {
@@ -25,6 +56,15 @@
 	}
 	& h4 {
 		color: $blue;
+		text-shadow: 3px 3px 10px rgba($color: $contrast-red, $alpha: 1.0);
+		font-size: 24px;
+	} 
+	& h5 {
+		opacity: 0;
+		color: $contrast-red;
+		font-size: 16px;
+		margin-top: 15px;
+		text-shadow: 3px 3px 10px rgba($color: $venetian-red, $alpha: 0.2);
 	}
 	& .img-container {
 		background-color: white;
@@ -56,6 +96,9 @@
 			color: $contrast-red;
 			padding: 0px 10px;
 			border-radius: 5px;
+			height: 24px;
+			overflow: hidden;
+			border: 1px solid $venetian-red;
 		}
 	}
 }

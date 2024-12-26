@@ -13,6 +13,9 @@ const Project = ({ id, project }) => {
 					<li key={index}>{lang}</li>
 				))}
 			</ul>
+			<h5>
+				Cliques pour plus de détails !
+			</h5>
 		</article>
 	);
 };

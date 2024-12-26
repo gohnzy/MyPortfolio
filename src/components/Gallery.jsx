@@ -9,17 +9,22 @@ const Gallery = () => {
 	const elementRef = useRef();
 
 	const changeProject = id => {
-		if (activeProject === 0 && id === 'left') {
-			setActiveProject(projectList.length - 1);
-		} else if (activeProject === projectList.length - 1 && id === 'right') {
-			setActiveProject(0);
-		} else if (id === 'left') {
-			setActiveProject(prev => Math.max(0, prev - 1));
-		} else if (id === 'right') {
-			setActiveProject(prev => prev + 1);
-		}
-		console.log(activeProject);
+		setTimeout(() => {
+			if (activeProject === 0 && id === 'left') {
+				setActiveProject(projectList.length - 1);
+			} else if (activeProject === projectList.length - 1 && id === 'right') {
+				setActiveProject(0);
+			} else if (id === 'left') {
+				setActiveProject(prev => Math.max(0, prev - 1));
+			} else if (id === 'right') {
+				setActiveProject(prev => prev + 1);
+			}
+		}, 2000);
 	};
+
+	const slideAnimation = () => {
+
+	}
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -61,11 +66,13 @@ const Gallery = () => {
 					id={'t'}
 					project={projectList[activeProject]}
 				></Project>
+				
 				<i
 					className="fa-solid fa-chevron-right"
 					id="right"
 					onClick={e => changeProject(e.target.id)}
 				></i>
+			
 			</div>
 		</section>
 	);

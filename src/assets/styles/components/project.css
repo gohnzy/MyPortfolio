@@ -130,15 +130,48 @@ h6 {
   background-color: #b2bcff;
   transition: 0.2s ease-in-out;
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4);
+  color: #71020c;
+}
+.project:hover h4 {
+  color: #a94676;
+  text-shadow: 0;
 }
 .project:hover ul {
-  display: none;
+  animation: closeList 0.2s ease-in-out forwards;
+}
+.project:hover li {
+  animation: closeList 0.2s ease-in-out forwards;
+}
+@keyframes closeList {
+  99% {
+    height: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+.project:hover h5 {
+  animation: tttt 0.15s ease 1s forwards;
+}
+@keyframes tttt {
+  to {
+    opacity: 1;
+  }
 }
 .project:not(:hover) {
   transition: 0.2s ease-in-out;
 }
 .project h4 {
   color: #b2bcff;
+  text-shadow: 3px 3px 10px #a94676;
+  font-size: 24px;
+}
+.project h5 {
+  opacity: 0;
+  color: #a94676;
+  font-size: 16px;
+  margin-top: 15px;
+  text-shadow: 3px 3px 10px rgba(113, 2, 12, 0.2);
 }
 .project .img-container {
   background-color: white;
@@ -171,4 +204,7 @@ h6 {
   color: #a94676;
   padding: 0px 10px;
   border-radius: 5px;
+  height: 24px;
+  overflow: hidden;
+  border: 1px solid #71020c;
 }/*# sourceMappingURL=project.css.map */
