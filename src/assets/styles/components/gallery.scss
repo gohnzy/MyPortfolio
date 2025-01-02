@@ -1,7 +1,7 @@
 @import '../index';
 
 #gallery {
-	padding-top: 50px;
+	padding-top: 100px;
 
 	& #projects-gallery {
 		margin-top: 30px;
@@ -28,6 +28,7 @@
 				color: $blue;
 				transform: scale(1.1);
 				transition: 0.1s ease-in-out;
+				text-shadow: 3px 3px 3px rgba($color: $venetian-red, $alpha: 0.4);
 			}
 
 			&:not(:hover) {

@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll';
+import { Link as Nav } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -6,11 +7,10 @@ import '../assets/styles/components/header.css';
 const Header = () => {
 	return (
 		<header>
-			<div id="title">
+			<Nav id="title" to="/">
 				<h1>Gohnzy</h1>
-				<img src="../asse" alt="" />
 				<p>web app developper</p>
-			</div>
+			</Nav>
 
 			<nav>
 				<h2>MENU</h2>

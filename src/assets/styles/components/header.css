@@ -118,6 +118,9 @@ header {
   align-content: center;
   margin: auto;
 }
+header a {
+  text-decoration: none;
+}
 header #title {
   width: 25%;
   margin: 0;

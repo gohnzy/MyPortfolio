@@ -1,0 +1,38 @@
+@import '../index';
+
+#loader-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.loader {
+		width: 150px;
+		aspect-ratio: 9;
+		background: linear-gradient(45deg, $venetian-red 50%, #0000 0),
+			linear-gradient(45deg, #0000 50%, $venetian-red 0),
+			linear-gradient(-45deg, $contrast-red 50%, #0000 0),
+			linear-gradient(-45deg, #0000 50%, $contrast-red 0),
+			linear-gradient($blue 0 0);
+		background-size: 50% 50%;
+		background-repeat: no-repeat;
+		animation: l18 1.5s infinite;
+	}
+	@keyframes l18 {
+		0% {
+			background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+		}
+		25% {
+			background-position: 0 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%;
+		}
+		50% {
+			background-position: 0 100%, 100% 0, 100% 100%, 0 0, 50% 50%;
+		}
+		75% {
+			background-position: 50% 50%, 50% 50%, 100% 100%, 0 0, 50% 50%;
+		}
+		100% {
+			background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+		}
+	}
+}

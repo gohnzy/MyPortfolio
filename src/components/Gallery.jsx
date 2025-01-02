@@ -22,9 +22,7 @@ const Gallery = () => {
 		}, 2000);
 	};
 
-	const slideAnimation = () => {
-
-	}
+	const slideAnimation = () => {};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -53,26 +51,23 @@ const Gallery = () => {
 				Mes derniers projets :
 			</h3>
 			<div id="projects-gallery">
-				{/* {projectList.map((project, index) => (
-					<Project key={index} id={index} project={project} />
-				))} */}
 				<i
 					className="fa-solid fa-chevron-left"
 					id="left"
 					onClick={e => changeProject(e.target.id)}
 				></i>
 				<Project
-					key={'t'}
-					id={'t'}
+					key={activeProject}
+					index={activeProject}
+					id={projectList[activeProject].name}
 					project={projectList[activeProject]}
 				></Project>
-				
+
 				<i
 					className="fa-solid fa-chevron-right"
 					id="right"
 					onClick={e => changeProject(e.target.id)}
 				></i>
-			
 			</div>
 		</section>
 	);

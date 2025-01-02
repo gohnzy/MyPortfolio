@@ -37,7 +37,7 @@ const Presentation = () => {
 				Salut c'est moi
 			</h3>
 			<div id="presentation-core">
-				<img src="assets/portrait-fun.png" alt="portrait" />
+				<img src="assets/ico.png" alt="portrait" />
 				<p>
 					Hello, moi c'est Greg(ory), 26 ans et toutes mes dents. Après 4 ans
 					dans le monde de l'automobile en tant que commercial, j'ai décidé de
@@ -46,7 +46,7 @@ const Presentation = () => {
 					réellement découvert que bien trop tard. Enfin, il n'est jamais
 					vraiment "trop tard", n'est-ce pas ?! J'ai donc décidé de sauter le
 					pas et me voilà, fièrement diplôme de la formation "Développeur
-					d'application web" et prêt à en décoder !
+					d'application web" d'OpenClassrooms et prêt à en décoder !
 				</p>
 			</div>
 		</section>

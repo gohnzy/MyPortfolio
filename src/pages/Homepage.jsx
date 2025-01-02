@@ -4,10 +4,23 @@ import Footer from '../components/Footer';
 import Presentation from '../components/Presentation';
 import Skills from '../components/Skills';
 import Gallery from '../components/Gallery';
+import '../assets/styles/components/loader.css';
 import '../assets/styles/pages/homepage.css';
-function App() {
-	return (
-		<div className="App">
+import { useEffect, useState } from 'react';
+function Homepage() {
+	const [loading, setLoading] = useState(true);
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 1500);
+	}, []);
+	return loading ? (
+		<div id="loader-container">
+			{' '}
+			<div className="loader"></div>
+		</div>
+	) : (
+		<div className="homepage">
 			<Element name="page-top">
 				<Header />
 			</Element>
@@ -27,4 +40,4 @@ function App() {
 	);
 }
 
-export default App;
+export default Homepage;

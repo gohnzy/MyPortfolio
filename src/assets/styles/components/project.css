@@ -129,7 +129,7 @@ h6 {
   transform: scale(1.05);
   background-color: #b2bcff;
   transition: 0.2s ease-in-out;
-  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 10px 0 rgba(113, 2, 12, 0.4);
   color: #71020c;
 }
 .project:hover h4 {
@@ -151,9 +151,9 @@ h6 {
   }
 }
 .project:hover h5 {
-  animation: tttt 0.15s ease 1s forwards;
+  animation: showText 0.15s ease 1s forwards;
 }
-@keyframes tttt {
+@keyframes showText {
   to {
     opacity: 1;
   }

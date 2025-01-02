@@ -109,70 +109,35 @@ h6 {
   color: #a94676;
 }
 
-#presentation {
+#loader-container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-}
-#presentation h3 {
-  margin: 50px 0 0 0;
-}
-#presentation #presentation-core {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  -moz-column-gap: 6%;
-       column-gap: 6%;
-  position: relative;
-  padding-bottom: 100px;
 }
-#presentation #presentation-core::after {
-  content: "";
-  background-color: #a94676;
-  width: 40%;
-  height: 2px;
-  position: absolute;
-  bottom: -1px;
-  left: 30%;
-  box-shadow: 2px 2px 10px 0 rgba(169, 70, 118, 0.5);
-  border-radius: 5px;
+#loader-container .loader {
+  width: 150px;
+  aspect-ratio: 9;
+  background: linear-gradient(45deg, #71020c 50%, rgba(0, 0, 0, 0) 0), linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, #71020c 0), linear-gradient(-45deg, #a94676 50%, rgba(0, 0, 0, 0) 0), linear-gradient(-45deg, rgba(0, 0, 0, 0) 50%, #a94676 0), linear-gradient(#b2bcff 0 0);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: l18 1.5s infinite;
 }
-#presentation #presentation-core img {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 300px;
-}
-#presentation #presentation-core p {
-  position: relative;
-  flex-wrap: wrap;
-  width: 70%;
-  padding-left: 10%;
-  box-sizing: border-box;
-  color: #71020c;
-  text-align: center;
-  text-align: end;
-}
-#presentation #presentation-core p::before {
-  content: "";
-  background-color: #b2bcff;
-  width: 5px;
-  height: 65%;
-  position: absolute;
-  right: -3%;
-  bottom: -10%;
-  box-shadow: 3px 3px 10px 0 rgba(113, 2, 12, 0.2);
-  border-radius: 5px;
-}
-#presentation #presentation-core p::after {
-  content: "";
-  background-color: #b2bcff;
-  width: 65%;
-  height: 5px;
-  position: absolute;
-  right: -3%;
-  bottom: -10%;
-  box-shadow: 3px 3px 10px 0 rgba(113, 2, 12, 0.2);
-  border-radius: 5px;
-}
-#presentation svg {
-  margin: auto;
-}/*# sourceMappingURL=presentation.css.map */
+@keyframes l18 {
+  0% {
+    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  }
+  25% {
+    background-position: 0 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%;
+  }
+  50% {
+    background-position: 0 100%, 100% 0, 100% 100%, 0 0, 50% 50%;
+  }
+  75% {
+    background-position: 50% 50%, 50% 50%, 100% 100%, 0 0, 50% 50%;
+  }
+  100% {
+    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  }
+}/*# sourceMappingURL=loader.css.map */

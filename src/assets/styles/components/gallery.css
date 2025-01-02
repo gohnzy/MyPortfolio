@@ -110,7 +110,7 @@ h6 {
 }
 
 #gallery {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 #gallery #projects-gallery {
   margin-top: 30px;
@@ -138,6 +138,7 @@ h6 {
   color: #b2bcff;
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
+  text-shadow: 3px 3px 3px rgba(113, 2, 12, 0.4);
 }
 #gallery #projects-gallery i:not(:hover) {
   transition: 0.1s ease-in-out;
