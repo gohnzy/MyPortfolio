@@ -22,7 +22,7 @@ const Gallery = () => {
 		}, 2000);
 	};
 
-	const slideAnimation = () => {};
+	// const slideAnimation = () => {};
 
 	useEffect(() => {
 		const handleScroll = () => {
