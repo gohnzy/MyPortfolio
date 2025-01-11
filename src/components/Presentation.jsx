@@ -34,7 +34,7 @@ const Presentation = () => {
 	return (
 		<section id="presentation">
 			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
-				Salut c'est moi
+				Bonjour !
 			</h3>
 			<div id="presentation-core">
 				<img src="assets/ico.png" alt="portrait" />

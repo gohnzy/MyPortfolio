@@ -182,6 +182,14 @@ h6 {
 }
 #skills .category .skillblock#relational {
   width: 100%;
+  padding: 0;
+}
+#skills .category .skillblock#relational ul {
+  list-style: circle;
+  list-style-position: inside;
+  padding: 0 25px;
+  color: #a94676;
+  line-height: 30px;
 }
 #skills .category .skillblock#frontend {
   display: grid;

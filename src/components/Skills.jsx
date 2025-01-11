@@ -33,17 +33,37 @@ const Skills = () => {
 	return (
 		<section id="skills">
 			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
-				Mes "Skills"
+				Mes "Skills".
 				<div id="whiteDiv"></div>
 			</h3>
 			<div id="commercial" className="category">
-				<h4>Commerce</h4>
+				<h4>General</h4>
 				<div id="relational" className="skillblock">
 					<ul>
+						<li>Methode AGILE</li>
+						<li>Gestion de projet</li>
 						<li>Relation client</li>
-						<li>Compréhension et satisfaction des besoins client</li>
-						<li>Achat, vente et négociation</li>
 						<li>Communication digitale</li>
+					</ul>
+
+					<ul>
+						<h5>Langues :</h5>
+						<li>
+							Français (maternel)
+							<div id="fr-lvl"></div>
+						</li>
+						<li>
+							Anglais (billingue)
+							<div id="en-lvl"></div>
+						</li>
+						<li>
+							Espagnol (Notions)
+							<div id="es-lvl"></div>
+						</li>
+						<li>
+							Allemand (Bases)
+							<div id="ge-lvl"></div>
+						</li>
 					</ul>
 				</div>
 			</div>

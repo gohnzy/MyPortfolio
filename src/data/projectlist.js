@@ -4,6 +4,10 @@ const projectList = [
 		languages: ['HTML', 'SCSS'],
 		main_picture: 'assets/projects_pictures/omfmpc.png',
 		view_link: 'https://gohnzy.github.io/ohmyfood/index.html',
+		catch_words:
+			"Entreprise proposant un service de commande de plat à l'avance pour les clients de restaurants",
+		description:
+			"La demande pour ce projet était de coder la maquette du front-end du site en mettant en place les animatios de bases du site et en créant un loader libre. Tout a été fait en HTML 5 et CSS 3 avec l'utilisation de SASS.",
 	},
 	{
 		name: 'GameOn',
