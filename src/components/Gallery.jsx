@@ -19,7 +19,7 @@ const Gallery = () => {
 			} else if (id === 'right') {
 				setActiveProject(prev => prev + 1);
 			}
-		}, 2000);
+		}, 500);
 	};
 
 	// const slideAnimation = () => {};
