@@ -128,6 +128,11 @@ h6 {
 #gallery {
   padding-top: 100px;
 }
+@media (max-width: 1100px) {
+  #gallery {
+    padding-top: 30px;
+  }
+}
 #gallery #projects-gallery {
   margin-top: 30px;
   display: flex;
@@ -141,6 +146,8 @@ h6 {
 @media (max-width: 700px) {
   #gallery #projects-gallery {
     gap: 8%;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media (max-width: 500px) {
@@ -177,13 +184,13 @@ h6 {
 @media (max-width: 600px) {
   #gallery #projects-gallery i {
     font-size: 52px;
-    width: 40px;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @media (max-width: 500px) {
   #gallery #projects-gallery i {
-    font-size: 44px;
-    width: 30px;
+    font-size: 40px;
   }
 }
 #gallery #projects-gallery i:hover {
