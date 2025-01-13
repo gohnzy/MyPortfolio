@@ -11,6 +11,9 @@ header {
 	align-items: center;
 	align-content: center;
 	margin: auto;
+	@media (max-width: 1100px) {
+		width: 90%;
+	}
 
 	& #title {
 		width: 25%;
@@ -50,6 +53,12 @@ header {
 			color: $venetian-red;
 			font-weight: 500;
 			text-shadow: 2px 4px 10px rgba($color: $venetian-red, $alpha: 0.2);
+			@media (max-width: 730px) {
+				font-size: 22px;
+			}
+			@media (max-width: 525px) {
+				font-size: 20px;
+			}
 			&::after {
 				content: '';
 				width: 0px;
@@ -62,6 +71,12 @@ header {
 		& p {
 			width: 100%;
 			color: $contrast-red;
+			@media (max-width: 730px) {
+				font-size: 12px;
+			}
+			@media (max-width: 525px) {
+				font-size: 10px;
+			}
 		}
 	}
 	& nav {
@@ -105,6 +120,12 @@ header {
 			margin: 0;
 			position: relative;
 			font-weight: 500;
+			@media (max-width: 730px) {
+				font-size: 20px;
+			}
+			@media (max-width: 525px) {
+				font-size: 18px;
+			}
 
 			&:hover {
 				cursor: default;
@@ -185,6 +206,13 @@ header {
 		&:hover #menu {
 			height: 120px;
 			transition: 0.2s;
+			@media (max-width: 1100px) {
+				flex-direction: row;
+				height: 20px;
+				margin: 0;
+				width: fit-content;
+				top: 130px;
+			}
 		}
 
 		&:not(:hover) #arrow-animation {
@@ -202,6 +230,9 @@ header {
 			transform: rotate(90deg) translateX(100px);
 			transition: 0.15s ease-in-out;
 			box-shadow: -2px -8px 7px 1px rgba($color: $venetian-red, $alpha: 0.2);
+			@media (max-width: 1100px) {
+				transform: rotate(90deg) translateX(40px);
+			}
 		}
 
 		&:not(:hover) h2::before {
@@ -215,6 +246,9 @@ header {
 			transform: rotate(-90deg) translateX(-100px);
 			transition: 0.15s ease-in-out;
 			box-shadow: 2px -8px 7px 1px rgba($color: $venetian-red, $alpha: 0.2);
+			@media (max-width: 1100px) {
+				transform: rotate(-90deg) translateX(-40px);
+			}
 		}
 
 		&:not(:hover) h2::after {
@@ -235,10 +269,19 @@ header {
 		& a {
 			width: 32px;
 			height: 32px;
+
 			& svg {
 				width: 32px;
 				height: 32px;
 				color: $venetian-red;
+				@media (max-width: 730px) {
+					width: 26px;
+					height: 26px;
+				}
+				@media (max-width: 525px) {
+					width: 22px;
+					height: 22px;
+				}
 			}
 			&:hover svg {
 				color: $contrast-red;

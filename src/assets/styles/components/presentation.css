@@ -8,8 +8,14 @@ body {
 }
 
 main {
-  width: 60%;
+  width: 70%;
   margin: auto;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 section {
@@ -29,6 +35,16 @@ h3 {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 730px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 525px) {
+  h3 {
+    font-size: 22px;
+  }
 }
 h3.active::before {
   content: "";
@@ -112,9 +128,21 @@ h6 {
 #presentation {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  #presentation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 #presentation h3 {
   margin: 50px 0 0 0;
+}
+@media (max-width: 1100px) {
+  #presentation h3 {
+    margin: 25px 0 25px 0;
+  }
 }
 #presentation #presentation-core {
   display: flex;
@@ -124,6 +152,25 @@ h6 {
        column-gap: 6%;
   position: relative;
   padding-bottom: 100px;
+  width: 100%;
+}
+@media (max-width: 1100px) {
+  #presentation #presentation-core {
+    -moz-column-gap: 0;
+         column-gap: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 760px) {
+  #presentation #presentation-core {
+    -moz-column-gap: 0;
+         column-gap: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
 }
 #presentation #presentation-core::after {
   content: "";
@@ -141,10 +188,19 @@ h6 {
   width: fit-content;
   height: 300px;
 }
+@media (max-width: 1100px) {
+  #presentation #presentation-core img {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 150px;
+  }
+}
 #presentation #presentation-core p {
   position: relative;
   flex-wrap: wrap;
   width: 70%;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-left: 10%;
   box-sizing: border-box;
   color: #71020c;
@@ -172,6 +228,32 @@ h6 {
   bottom: -10%;
   box-shadow: 3px 3px 10px 0 rgba(113, 2, 12, 0.2);
   border-radius: 5px;
+}
+@media (max-width: 1100px) {
+  #presentation #presentation-core p {
+    padding-left: 0;
+    height: 100%;
+    width: 450px;
+  }
+  #presentation #presentation-core p::before {
+    content: "";
+    display: none;
+  }
+  #presentation #presentation-core p::after {
+    content: "";
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  #presentation #presentation-core p {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 760px) {
+  #presentation #presentation-core p {
+    font-size: 14px;
+  }
 }
 #presentation svg {
   margin: auto;

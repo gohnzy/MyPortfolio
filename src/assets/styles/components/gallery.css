@@ -8,8 +8,14 @@ body {
 }
 
 main {
-  width: 60%;
+  width: 70%;
   margin: auto;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 section {
@@ -29,6 +35,16 @@ h3 {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 730px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 525px) {
+  h3 {
+    font-size: 22px;
+  }
 }
 h3.active::before {
   content: "";
@@ -122,9 +138,34 @@ h6 {
   width: 100%;
   overflow: hidden;
 }
+@media (max-width: 700px) {
+  #gallery #projects-gallery {
+    gap: 8%;
+  }
+}
+@media (max-width: 500px) {
+  #gallery #projects-gallery {
+    gap: 6%;
+  }
+}
 #gallery #projects-gallery article {
   width: 600px;
   height: 70%;
+}
+@media (max-width: 700px) {
+  #gallery #projects-gallery article {
+    height: 70%;
+  }
+}
+@media (max-width: 600px) {
+  #gallery #projects-gallery article {
+    height: 60%;
+  }
+}
+@media (max-width: 500px) {
+  #gallery #projects-gallery article {
+    height: 50%;
+  }
 }
 #gallery #projects-gallery i {
   font-size: 64px;
@@ -132,6 +173,18 @@ h6 {
   height: -moz-fit-content;
   height: fit-content;
   color: #71020c;
+}
+@media (max-width: 600px) {
+  #gallery #projects-gallery i {
+    font-size: 52px;
+    width: 40px;
+  }
+}
+@media (max-width: 500px) {
+  #gallery #projects-gallery i {
+    font-size: 44px;
+    width: 30px;
+  }
 }
 #gallery #projects-gallery i:hover {
   cursor: pointer;

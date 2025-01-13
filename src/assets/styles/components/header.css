@@ -8,8 +8,14 @@ body {
 }
 
 main {
-  width: 60%;
+  width: 70%;
   margin: auto;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 section {
@@ -29,6 +35,16 @@ h3 {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 730px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 525px) {
+  h3 {
+    font-size: 22px;
+  }
 }
 h3.active::before {
   content: "";
@@ -121,6 +137,11 @@ header {
 header a {
   text-decoration: none;
 }
+@media (max-width: 1100px) {
+  header {
+    width: 90%;
+  }
+}
 header #title {
   width: 25%;
   margin: 0;
@@ -155,6 +176,16 @@ header #title h1 {
   font-weight: 500;
   text-shadow: 2px 4px 10px rgba(113, 2, 12, 0.2);
 }
+@media (max-width: 730px) {
+  header #title h1 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 525px) {
+  header #title h1 {
+    font-size: 20px;
+  }
+}
 header #title h1::after {
   content: "";
   width: 0px;
@@ -165,6 +196,16 @@ header #title h1::after {
 header #title p {
   width: 100%;
   color: #a94676;
+}
+@media (max-width: 730px) {
+  header #title p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 525px) {
+  header #title p {
+    font-size: 10px;
+  }
 }
 header nav {
   width: -moz-fit-content;
@@ -208,6 +249,16 @@ header nav h2 {
   margin: 0;
   position: relative;
   font-weight: 500;
+}
+@media (max-width: 730px) {
+  header nav h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 525px) {
+  header nav h2 {
+    font-size: 18px;
+  }
 }
 header nav h2:hover {
   cursor: default;
@@ -280,6 +331,16 @@ header nav:hover #menu {
   height: 120px;
   transition: 0.2s;
 }
+@media (max-width: 1100px) {
+  header nav:hover #menu {
+    flex-direction: row;
+    height: 20px;
+    margin: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    top: 130px;
+  }
+}
 header nav:not(:hover) #arrow-animation {
   width: 0;
   height: 0;
@@ -295,6 +356,11 @@ header nav:hover h2::before {
   transition: 0.15s ease-in-out;
   box-shadow: -2px -8px 7px 1px rgba(113, 2, 12, 0.2);
 }
+@media (max-width: 1100px) {
+  header nav:hover h2::before {
+    transform: rotate(90deg) translateX(40px);
+  }
+}
 header nav:not(:hover) h2::before {
   transition: 0.2s ease-in-out;
   box-shadow: 0px 5px 5px 1px rgba(113, 2, 12, 0.05);
@@ -305,6 +371,11 @@ header nav:hover h2::after {
   transform: rotate(-90deg) translateX(-100px);
   transition: 0.15s ease-in-out;
   box-shadow: 2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+}
+@media (max-width: 1100px) {
+  header nav:hover h2::after {
+    transform: rotate(-90deg) translateX(-40px);
+  }
 }
 header nav:not(:hover) h2::after {
   transition: 0.2s ease-in-out;
@@ -327,6 +398,18 @@ header #links a svg {
   width: 32px;
   height: 32px;
   color: #71020c;
+}
+@media (max-width: 730px) {
+  header #links a svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 525px) {
+  header #links a svg {
+    width: 22px;
+    height: 22px;
+  }
 }
 header #links a:hover svg {
   color: #a94676;

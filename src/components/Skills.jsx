@@ -60,10 +60,6 @@ const Skills = () => {
 							Espagnol (Notions)
 							<div id="es-lvl"></div>
 						</li>
-						<li>
-							Allemand (Bases)
-							<div id="ge-lvl"></div>
-						</li>
 					</ul>
 				</div>
 			</div>

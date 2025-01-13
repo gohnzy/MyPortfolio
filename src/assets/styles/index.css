@@ -8,8 +8,14 @@ body {
 }
 
 main {
-  width: 60%;
+  width: 70%;
   margin: auto;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 section {
@@ -29,6 +35,16 @@ h3 {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 730px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 525px) {
+  h3 {
+    font-size: 22px;
+  }
 }
 h3.active::before {
   content: "";

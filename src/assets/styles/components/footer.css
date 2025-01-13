@@ -8,8 +8,14 @@ body {
 }
 
 main {
-  width: 60%;
+  width: 70%;
   margin: auto;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 section {
@@ -29,6 +35,16 @@ h3 {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+}
+@media (max-width: 730px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 525px) {
+  h3 {
+    font-size: 22px;
+  }
 }
 h3.active::before {
   content: "";
@@ -112,15 +128,37 @@ h6 {
 footer {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 60%;
+  gap: 50vw;
   background-color: #71020c;
   width: 100%;
   height: 200px;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+@media (max-width: 700px) {
+  footer {
+    gap: 30vw;
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    gap: 20vw;
+  }
 }
 footer img {
   width: 50px;
+}
+@media (max-width: 700px) {
+  footer img {
+    width: 40px;
+  }
+}
+@media (max-width: 500px) {
+  footer img {
+    width: 30px;
+  }
 }
 footer img:hover {
   cursor: pointer;
@@ -128,4 +166,9 @@ footer img:hover {
 footer p {
   font-size: 12px;
   color: white;
+}
+@media (max-width: 700px) {
+  footer p {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=footer.css.map */
