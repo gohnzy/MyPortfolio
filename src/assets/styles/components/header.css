@@ -17,6 +17,18 @@ main {
     padding: 0;
   }
 }
+@media (max-width: 800px) {
+  main {
+    width: 85%;
+    padding: 0;
+  }
+}
+@media (max-width: 620px) {
+  main {
+    width: 90%;
+    padding: 0;
+  }
+}
 
 section {
   margin: auto;
@@ -208,10 +220,8 @@ header #title p {
   }
 }
 header nav {
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 300px;
+  height: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -221,6 +231,7 @@ header nav {
 }
 header nav:hover {
   height: 400px;
+  transition: 0.3s;
 }
 header nav #arrow-animation {
   top: 103px;
@@ -230,12 +241,13 @@ header nav #arrow-animation {
   border-right: 15px solid transparent;
   border-top: 10px solid #71020c;
   position: absolute;
+  z-index: 30;
 }
 header nav:hover #arrow-animation {
   width: 100px;
   border-left: 0px solid transparent;
   border-right: 0px solid transparent;
-  border-top: 2px solid #a94676;
+  border-top: 0px solid #a94676;
   transition: 0.1s ease-in-out;
 }
 header nav h2 {
@@ -273,6 +285,7 @@ header nav h2::before {
   position: absolute;
   left: 55px;
   pointer-events: none;
+  z-index: 30;
 }
 header nav h2::after {
   content: "";
@@ -284,16 +297,17 @@ header nav h2::after {
   position: absolute;
   right: 55px;
   pointer-events: none;
+  z-index: 30;
 }
 header nav #menu {
   display: none;
-  height: 0;
+  height: 0px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   color: #71020c;
   font-size: 18px;
   position: absolute;
@@ -302,9 +316,12 @@ header nav #menu {
   box-sizing: border-box;
   text-align: center;
 }
+header nav #menu a {
+  color: #71020c;
+}
 header nav #menu *::after {
   content: "";
-  width: 0px;
+  width: 100%;
   display: block;
   background-color: #a94676;
   margin: auto;
@@ -329,16 +346,20 @@ header nav #menu *:not(:hover) {
 }
 header nav:hover #menu {
   height: 120px;
-  transition: 0.2s;
+  transition: 0.1s;
+  transition-timing-function: linear;
+  transform-origin: top;
 }
 @media (max-width: 1100px) {
   header nav:hover #menu {
     flex-direction: row;
-    height: 20px;
+    height: 70px;
     margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
     width: -moz-fit-content;
     width: fit-content;
-    top: 130px;
+    top: 110px;
   }
 }
 header nav:not(:hover) #arrow-animation {
@@ -359,6 +380,33 @@ header nav:hover h2::before {
 @media (max-width: 1100px) {
   header nav:hover h2::before {
     transform: rotate(90deg) translateX(40px);
+    width: 3vw;
+    left: 180px;
+  }
+}
+@media (max-width: 1000px) {
+  header nav:hover h2::before {
+    left: 170px;
+  }
+}
+@media (max-width: 750px) {
+  header nav:hover h2::before {
+    left: 175px;
+  }
+}
+@media (min-width: 1800px) {
+  header nav:hover h2::before {
+    width: 4vw;
+  }
+}
+@media (min-width: 2400px) {
+  header nav:hover h2::before {
+    width: 3.5vw;
+  }
+}
+@media (min-width: 2600px) {
+  header nav:hover h2::before {
+    width: 3vw;
   }
 }
 header nav:not(:hover) h2::before {
@@ -375,6 +423,33 @@ header nav:hover h2::after {
 @media (max-width: 1100px) {
   header nav:hover h2::after {
     transform: rotate(-90deg) translateX(-40px);
+    width: 3vw;
+    right: 180px;
+  }
+}
+@media (max-width: 1000px) {
+  header nav:hover h2::after {
+    right: 170px;
+  }
+}
+@media (max-width: 750px) {
+  header nav:hover h2::after {
+    right: 175px;
+  }
+}
+@media (min-width: 1800px) {
+  header nav:hover h2::after {
+    width: 4vw;
+  }
+}
+@media (min-width: 2400px) {
+  header nav:hover h2::after {
+    width: 3.5vw;
+  }
+}
+@media (min-width: 2600px) {
+  header nav:hover h2::after {
+    width: 3vw;
   }
 }
 header nav:not(:hover) h2::after {

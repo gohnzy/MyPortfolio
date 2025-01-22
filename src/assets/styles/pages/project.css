@@ -138,40 +138,48 @@ h6 {
 }
 
 .Project #project-header {
-  height: 300px;
+  border-radius: 25px;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 100px;
   width: 100%;
-  display: grid;
-  grid-template-rows: 70px 220px;
-  grid-template-columns: 30% 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
 }
-@media (max-width: 750px) {
+@media (max-width: 1200px) {
   .Project #project-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: -moz-fit-content;
-    height: fit-content;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .Project #project-header {
+    flex-direction: column;
   }
 }
 .Project #project-header h1 {
   width: 100%;
-  grid-area: 1/1/2/3;
-  color: #71020c;
+  color: #b2bcff;
 }
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .Project #project-header h1 {
     text-align: center;
   }
 }
 .Project #project-header img {
   display: block;
-  width: 250px;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  grid-area: 2/1/3/2;
   -o-object-fit: contain;
      object-fit: contain;
+  box-shadow: 0px 0px 10px 5px rgba(178, 188, 255, 0.2);
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
 }
 @media (max-width: 1100px) {
   .Project #project-header img {
@@ -194,8 +202,55 @@ h6 {
     max-height: 150px;
   }
 }
-.Project #project-header p {
-  grid-area: 2/2/3/3;
+.Project #project-header ul {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+}
+@media (max-width: 1000px) {
+  .Project #project-header ul {
+    justify-content: center;
+  }
+}
+.Project #project-header ul li {
+  list-style: none;
+  font-style: italic;
+  text-shadow: 0px 0px 10px rgba(178, 188, 255, 0.5);
+  border-radius: 5px;
+  color: #b2bcff;
+  padding: 1px 7px;
+}
+.Project #project-header #desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  max-width: 60%;
+}
+@media (max-width: 1000px) {
+  .Project #project-header #desc {
+    max-width: 100%;
+    align-items: center;
+  }
+}
+.Project #project-header #desc h3 {
+  margin-right: 35px;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: end;
+  color: #b2bcff;
+  text-shadow: 3px 3px 10px #a94676;
+}
+@media (max-width: 1000px) {
+  .Project #project-header #desc h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+.Project #project-header #desc p {
   width: 60%;
   height: -moz-fit-content;
   height: fit-content;
@@ -203,40 +258,147 @@ h6 {
   justify-self: end;
   margin-right: 35px;
   font-size: 18px;
-  color: #a94676;
+  color: #b2bcff;
   position: relative;
 }
-.Project #project-header p::before {
+@media (max-width: 1000px) {
+  .Project #project-header #desc p {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .Project #project-header #desc p {
+    text-align: center;
+    width: 100%;
+  }
+}
+.Project #project-header #desc p::before {
   content: "";
-  background-color: #b2bcff;
+  background-color: #a94676;
   width: 5px;
   height: 65%;
   position: absolute;
   right: -3%;
   bottom: -10px;
-  box-shadow: 3px 3px 10px 0 rgba(113, 2, 12, 0.2);
+  box-shadow: 3px 3px 10px 0 rgba(169, 70, 118, 0.2);
   border-radius: 5px;
 }
 @media (max-width: 600px) {
-  .Project #project-header p::before {
+  .Project #project-header #desc p::before {
     display: none;
   }
 }
-.Project #project-header p::after {
+.Project #project-header #desc p::after {
   content: "";
-  background-color: #b2bcff;
+  background-color: #a94676;
   width: 65%;
   height: 5px;
   position: absolute;
   right: -3%;
   bottom: -10px;
-  box-shadow: 3px 3px 10px 0 rgba(113, 2, 12, 0.2);
+  box-shadow: 3px 3px 10px 0 rgba(169, 70, 118, 0.2);
   border-radius: 5px;
 }
 @media (max-width: 600px) {
-  .Project #project-header p::after {
+  .Project #project-header #desc p::after {
     display: none;
   }
+}
+.Project #project-header::after {
+  content: "";
+  background-color: #a94676;
+  width: 40%;
+  height: 2px;
+  position: absolute;
+  bottom: -10px;
+  left: 30%;
+  box-shadow: 2px 2px 10px 0 rgba(169, 70, 118, 0.5);
+  border-radius: 5px;
+}
+.Project #project-core #project-core-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.Project #project-core #project-core-header h3 {
+  margin-bottom: 0;
+}
+.Project #project-core #project-core-header p {
+  color: #b2bcff;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.Project #project-core #project-core-header button {
+  display: flex;
+  justify-content: center;
+  background-color: #71020c;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  box-shadow: 3px 3px 10px 0 rgba(178, 188, 255, 0.7);
+  margin-bottom: 30px;
+  position: relative;
+}
+.Project #project-core #project-core-header button::after {
+  opacity: 0;
+  content: "Recharger le viewer";
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: -35px;
+  color: #b2bcff;
+  white-space: nowrap;
+  font-size: 12px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.Project #project-core #project-core-header button i {
+  font-size: 20px;
+}
+.Project #project-core #project-core-header button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px 0 #b2bcff;
+}
+.Project #project-core #project-core-header button:hover::after {
+  opacity: 1;
+  transition: 0.25s;
+}
+.Project #project-core #project-core-header button:hover i {
+  transform: rotate(360deg);
+  transition-timing-function: ease-in-out;
+  transition: 2s;
+}
+.Project #project-core #project-core-header button:not(:hover)::after {
+  transition: 0.15s;
+}
+.Project #project-core iframe {
+  width: 1000px;
+}
+.Project #project-core #no-viewer {
+  color: #71020c;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+.Project #project-core button {
+  display: flex;
+  justify-content: center;
+  background-color: #71020c;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  box-shadow: 3px 3px 10px 0 rgba(178, 188, 255, 0.7);
+  margin-bottom: 30px;
+  position: relative;
+  color: #b2bcff;
+}
+.Project #project-core button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px 0 #b2bcff;
+}
+.Project #project-core button:hover:not(:hover)::after {
+  transition: 0.15s;
 }
 .Project #temp {
   text-align: center;
@@ -247,4 +409,83 @@ h6 {
   border: 3px solid #71020c;
   box-shadow: 10px 10px 3px 0 rgba(0, 0, 0, 0.2);
   align-content: center;
+}
+.Project nav:hover #menu {
+  top: 75px;
+}
+@media (max-width: 1100px) {
+  .Project nav:hover #menu {
+    top: 130px;
+  }
+}
+.Project nav:hover h2::before {
+  width: 3vw;
+  left: 150px;
+  transform: rotate(90deg) translateX(35px);
+  transition: 0.15s ease-in-out;
+  box-shadow: -2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+}
+@media (max-width: 1100px) {
+  .Project nav:hover h2::before {
+    transform: rotate(90deg) translateX(40px);
+  }
+}
+@media (min-width: 1800px) {
+  .Project nav:hover h2::before {
+    width: 2.5vw;
+  }
+}
+@media (min-width: 2100px) {
+  .Project nav:hover h2::before {
+    width: 2vw;
+  }
+}
+@media (min-width: 2700px) {
+  .Project nav:hover h2::before {
+    width: 1.5vw;
+  }
+}
+.Project nav:hover h2::after {
+  width: 3vw;
+  right: 150px;
+  transform: rotate(-90deg) translateX(-35px);
+  transition: 0.15s ease-in-out;
+  box-shadow: 2px -8px 7px 1px rgba(113, 2, 12, 0.2);
+}
+@media (max-width: 1100px) {
+  .Project nav:hover h2::after {
+    transform: rotate(-90deg) translateX(-40px);
+  }
+}
+@media (min-width: 1800px) {
+  .Project nav:hover h2::after {
+    width: 2.5vw;
+  }
+}
+@media (min-width: 2100px) {
+  .Project nav:hover h2::after {
+    width: 2vw;
+  }
+}
+@media (min-width: 2700px) {
+  .Project nav:hover h2::after {
+    width: 1.5vw;
+  }
+}
+
+#viewer-parent {
+  overflow: hidden;
+  border: 3px solid #71020c;
+  border-radius: 25px;
+  padding: 20px;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+#viewer-parent #loader-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 400px;
 }/*# sourceMappingURL=project.css.map */

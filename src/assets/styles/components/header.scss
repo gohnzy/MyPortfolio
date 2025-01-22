@@ -80,8 +80,8 @@ header {
 		}
 	}
 	& nav {
-		width: fit-content;
-		height: fit-content;
+		width: 300px;
+		height: 0;
 		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
@@ -91,6 +91,7 @@ header {
 
 		&:hover {
 			height: 400px;
+			transition: 0.3s;
 		}
 		#arrow-animation {
 			top: 103px;
@@ -100,12 +101,13 @@ header {
 			border-right: 15px solid transparent;
 			border-top: 10px solid $venetian-red;
 			position: absolute;
+			z-index: 30;
 		}
 		&:hover #arrow-animation {
 			width: 100px;
 			border-left: 0px solid transparent;
 			border-right: 0px solid transparent;
-			border-top: 2px solid $contrast-red;
+			border-top: 0px solid $contrast-red;
 			transition: 0.1s ease-in-out;
 		}
 
@@ -141,6 +143,9 @@ header {
 				position: absolute;
 				left: 55px;
 				pointer-events: none;
+				z-index: 30;
+				@media (min-width: 1800px) {
+				}
 			}
 			&::after {
 				content: '';
@@ -152,18 +157,19 @@ header {
 				position: absolute;
 				right: 55px;
 				pointer-events: none;
+				z-index: 30;
 			}
 		}
 
 		& #menu {
 			display: none;
-			height: 0;
+			height: 0px;
 			overflow: hidden;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
 			align-items: center;
-			gap: 10px;
+			gap: 0px;
 			color: $venetian-red;
 			font-size: 18px;
 			position: absolute;
@@ -172,10 +178,14 @@ header {
 			box-sizing: border-box;
 			text-align: center;
 
+			& a {
+				color: $venetian-red;
+			}
+
 			& * {
 				&::after {
 					content: '';
-					width: 0px;
+					width: 100%;
 					display: block;
 					background-color: $contrast-red;
 					margin: auto;
@@ -205,13 +215,17 @@ header {
 
 		&:hover #menu {
 			height: 120px;
-			transition: 0.2s;
+			transition: 0.1s;
+			transition-timing-function: linear;
+			transform-origin: top;
 			@media (max-width: 1100px) {
 				flex-direction: row;
-				height: 20px;
+				height: 70px;
 				margin: 0;
+				padding-left: 30px;
+				padding-right: 30px;
 				width: fit-content;
-				top: 130px;
+				top: 110px;
 			}
 		}
 
@@ -230,8 +244,27 @@ header {
 			transform: rotate(90deg) translateX(100px);
 			transition: 0.15s ease-in-out;
 			box-shadow: -2px -8px 7px 1px rgba($color: $venetian-red, $alpha: 0.2);
+
 			@media (max-width: 1100px) {
 				transform: rotate(90deg) translateX(40px);
+				width: 3vw;
+				left: 180px;
+			}
+			@media (max-width: 1000px) {
+				left: 170px;
+			}
+
+			@media (max-width: 750px) {
+				left: 175px;
+			}
+			@media (min-width: 1800px) {
+				width: 4vw;
+			}
+			@media (min-width: 2400px) {
+				width: 3.5vw;
+			}
+			@media (min-width: 2600px) {
+				width: 3vw;
 			}
 		}
 
@@ -248,6 +281,23 @@ header {
 			box-shadow: 2px -8px 7px 1px rgba($color: $venetian-red, $alpha: 0.2);
 			@media (max-width: 1100px) {
 				transform: rotate(-90deg) translateX(-40px);
+				width: 3vw;
+				right: 180px;
+			}
+			@media (max-width: 1000px) {
+				right: 170px;
+			}
+			@media (max-width: 750px) {
+				right: 175px;
+			}
+			@media (min-width: 1800px) {
+				width: 4vw;
+			}
+			@media (min-width: 2400px) {
+				width: 3.5vw;
+			}
+			@media (min-width: 2600px) {
+				width: 3vw;
 			}
 		}
 

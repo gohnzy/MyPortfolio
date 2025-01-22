@@ -4,15 +4,67 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	// background-color: $venetian-red;
+	border-radius: 25px;
+	padding: 50px 100px;
+	position: relative;
+	box-sizing: border-box;
+	@media (max-width: 1100px) {
+		gap: 30px;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('../../theds3.JPG');
+		background-size: cover;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		filter: brightness(0.5); /* Filtre uniquement pour le pseudo-élément */
+		border-radius: 25px;
+		box-shadow: 0px 0px 15px 3px rgba($color: $venetian-red, $alpha: 0.2);
+	}
+	&::after {
+		content: '';
+		background-color: $contrast-red;
+		width: 40%;
+		height: 2px;
+		position: absolute;
+		bottom: -50px;
+		left: 30%;
+		box-shadow: 2px 2px 10px 0 rgba($color: $venetian-red, $alpha: 0.5);
+		border-radius: 5px;
+	}
 	@media (max-width: 1100px) {
 		flex-direction: column;
 		align-items: center;
 	}
 
 	& h3 {
-		margin: 50px 0 0 0;
+		position: relative;
+		margin-bottom: 50px;
+		z-index: 10;
 		@media (max-width: 1100px) {
 			margin: 25px 0 25px 0;
+		}
+		& #testo {
+			position: absolute;
+			width: 220%;
+			left: -100%;
+			height: 180%;
+			top: -50%;
+			z-index: -10;
+			background-color: white;
+			border-radius: 0 25px 25px 0;
+			box-shadow: 40px 05px 15px 0px rgba($color: #000000, $alpha: 0.1);
+			@media (max-width: 1100px) {
+				border-radius: 25px;
+				left: -100%;
+				width: 300%;
+			}
 		}
 	}
 
@@ -37,24 +89,17 @@
 			padding-bottom: 10px;
 		}
 
-		&::after {
-			content: '';
-			background-color: $contrast-red;
-			width: 40%;
-			height: 2px;
-			position: absolute;
-			bottom: -1px;
-			left: 30%;
-			box-shadow: 2px 2px 10px 0 rgba($color: $contrast-red, $alpha: 0.5);
-			border-radius: 5px;
-		}
 		& img {
-			width: fit-content;
-			height: 300px;
+			width: 250px;
+			height: fit-content;
+			background-color: white;
+			border-radius: 25px;
+			box-shadow: 10px 10px 10px 3px rgba($color: $venetian-red, $alpha: 0.1);
 
 			@media (max-width: 1100px) {
 				width: fit-content;
 				height: 150px;
+				margin-bottom: 30px;
 			}
 		}
 		& p {
@@ -64,34 +109,38 @@
 			height: fit-content;
 			padding-left: 10%;
 			box-sizing: border-box;
-			color: $venetian-red;
+			color: $blue;
+			text-shadow: 3px 3px 0 rgba($color: $contrast-red, $alpha: 0.2);
 			text-align: center;
 			text-align: end;
+			// background-color: rgba($color: black, $alpha: 0.8);
+			border-radius: 25px;
+			padding: 20px;
+
 			&::before {
 				content: '';
-				background-color: $blue;
+				background-color: $contrast-red;
 				width: 5px;
 				height: 65%;
 				position: absolute;
 				right: -3%;
 				bottom: -10%;
-				box-shadow: 3px 3px 10px 0 rgba($color: $venetian-red, $alpha: 0.2);
+				box-shadow: 3px 3px 10px 0 rgba($color: $blue, $alpha: 0.2);
 				border-radius: 5px;
 			}
 			&::after {
 				content: '';
-				background-color: $blue;
+				background-color: $contrast-red;
 				width: 65%;
 				height: 5px;
 				position: absolute;
 				right: -3%;
 				bottom: -10%;
-				box-shadow: 3px 3px 10px 0 rgba($color: $venetian-red, $alpha: 0.2);
+				box-shadow: 3px 3px 10px 0 rgba($color: $blue, $alpha: 0.2);
 				border-radius: 5px;
 			}
 
 			@media (max-width: 1100px) {
-				padding-left: 0;
 				height: 100%;
 				width: 450px;
 

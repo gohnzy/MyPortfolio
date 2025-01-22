@@ -4,7 +4,137 @@
 
 body {
   margin: auto;
-  width: 80%;
+  width: 100%;
+}
+
+main {
+  width: 70%;
+  margin: auto;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    width: 85%;
+    padding: 0;
+  }
+}
+@media (max-width: 620px) {
+  main {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+section {
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+h3 {
+  color: #a94676;
+  font-family: "Oxanium", sans-serif;
+  font-size: 32px;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 730px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 525px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+h3.active::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #a94676;
+  position: absolute;
+  display: block;
+  top: -8px;
+  animation: topLine 0.8s ease-in-out infinite;
+}
+@keyframes topLine {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  49% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  50% {
+    transform-origin: left;
+  }
+  51% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+h3.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #a94676;
+  position: absolute;
+  display: block;
+  animation: botLine 0.8s ease-in-out infinite;
+}
+@keyframes botLine {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  49% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+h4 {
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #b2bcff;
+}
+
+h5 {
+  margin: 0;
+  color: #71020c;
+}
+
+h6 {
+  margin: 0;
+  color: #a94676;
 }
 
 main {
@@ -13,4 +143,63 @@ main {
 main img {
   width: 100px;
   height: 100px;
+}
+
+.homepage header nav:hover #menu {
+  background-color: white;
+  z-index: 10;
+  width: 22%;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 0px 10px 15px 3px rgba(169, 70, 118, 0.2);
+}
+@media (max-width: 1500px) {
+  .homepage header nav:hover #menu {
+    width: 25%;
+  }
+}
+@media (max-width: 1300px) {
+  .homepage header nav:hover #menu {
+    width: 30%;
+  }
+}
+@media (max-width: 1100px) {
+  .homepage header nav:hover #menu {
+    width: 35%;
+  }
+}
+@media (max-width: 900px) {
+  .homepage header nav:hover #menu {
+    width: 40%;
+  }
+}
+@media (max-width: 750px) {
+  .homepage header nav:hover #menu {
+    width: 50%;
+  }
+}
+@media (max-width: 650px) {
+  .homepage header nav:hover #menu {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .homepage header nav:hover #menu {
+    width: 65%;
+  }
+}
+@media (max-width: 500px) {
+  .homepage header nav:hover #menu {
+    width: 70%;
+  }
+}
+@media (max-width: 470px) {
+  .homepage header nav:hover #menu {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .homepage header nav:hover #menu {
+    width: 90%;
+  }
 }/*# sourceMappingURL=homepage.css.map */
