@@ -168,6 +168,7 @@ h6 {
     gap: 20px;
     height: -moz-fit-content;
     height: fit-content;
+    overflow: visible;
   }
 }
 @media (max-width: 500px) {
@@ -177,7 +178,9 @@ h6 {
 }
 #gallery #projects-gallery article {
   width: 600px;
-  height: 520px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 500px;
 }
 @media (max-width: 900px) {
   #gallery #projects-gallery article {

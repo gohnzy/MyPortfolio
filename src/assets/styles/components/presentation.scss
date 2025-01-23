@@ -43,6 +43,10 @@
 		align-items: center;
 	}
 
+	@media (max-width: 600px) {
+		padding: 30px 15px;
+	}
+
 	& h3 {
 		position: relative;
 		margin-bottom: 50px;
@@ -160,6 +164,9 @@
 
 			@media (max-width: 760px) {
 				font-size: 14px;
+			}
+			@media (max-width: 600px) {
+				width: 100%;
 			}
 		}
 	}

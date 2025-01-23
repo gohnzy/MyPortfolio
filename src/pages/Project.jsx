@@ -35,6 +35,7 @@ const ProjectPage = () => {
 			setLoading(false);
 		}, 1500);
 	}, []);
+
 	return loading || !project ? (
 		<div id="loader-container">
 			{' '}

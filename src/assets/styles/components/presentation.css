@@ -184,6 +184,11 @@ h6 {
     align-items: center;
   }
 }
+@media (max-width: 600px) {
+  #presentation {
+    padding: 30px 15px;
+  }
+}
 #presentation h3 {
   position: relative;
   margin-bottom: 50px;
@@ -316,6 +321,11 @@ h6 {
 @media (max-width: 760px) {
   #presentation #presentation-core p {
     font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  #presentation #presentation-core p {
+    width: 100%;
   }
 }
 #presentation svg {

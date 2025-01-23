@@ -57,7 +57,7 @@ const projectList = [
 		name: 'Kasa',
 		logo: 'assets/projects_pictures/projects_logos/klogo.webp',
 		languages: ['ReactJS'],
-		main_picture: null,
+		main_picture: 'assets/projects_pictures/kmpc.webp',
 		illustration: 'assets/projects_illustrations/kill.webp',
 		view_link: 'https://lpp-seven.vercel.app/',
 		catch_words: 'Site de location de logement',

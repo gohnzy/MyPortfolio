@@ -6,7 +6,9 @@ import Project from './features/Project';
 const Gallery = () => {
 	const [isHighlighted, setIsHighlighted] = useState(false);
 	const [activeProject, setActiveProject] = useState(0);
+	const [isPaused, setIsPaused] = useState(false); // État pour gérer la pause
 	const elementRef = useRef();
+	const pauseTimeoutRef = useRef(null); // Pour nettoyer le timeout si nécessaire
 
 	const changeProject = id => {
 		setTimeout(() => {
@@ -22,13 +24,43 @@ const Gallery = () => {
 		}, 500);
 	};
 
-	// const slideAnimation = () => {};
+	// Gestion de l'auto-défilement
+	// useEffect(() => {
+	// 	if (isPaused) return;
+
+	// 	const interval = setInterval(() => {
+	// 		setActiveProject(prev =>
+	// 			prev === projectList.length - 1 ? 0 : prev + 1,
+	// 		);
+	// 	}, 3000);
+
+	// 	return () => clearInterval(interval);
+	// }, [isPaused]);
+
+	// Pause automatique pendant 5 secondes
+	const handlePause = () => {
+		setIsPaused(true);
+
+		// Annuler tout timeout en cours avant d'en définir un nouveau
+		if (pauseTimeoutRef.current) {
+			clearTimeout(pauseTimeoutRef.current);
+		}
+
+		pauseTimeoutRef.current = setTimeout(() => {
+			setIsPaused(false);
+		}, 5000);
+	};
+
+	// Gestion du clic manuel pour mettre en pause
+	const handleManualChange = id => {
+		handlePause(); // Pause automatique de 5 secondes
+		changeProject(id);
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
 			if (!elementRef.current) return;
 
-			// Obtenir la position de l'élément
 			const rect = elementRef.current.getBoundingClientRect();
 			const middleOfScreen = window.innerHeight / 2;
 
@@ -45,6 +77,7 @@ const Gallery = () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
+
 	return (
 		<section id="gallery">
 			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
@@ -54,7 +87,7 @@ const Gallery = () => {
 				<i
 					className="fa-solid fa-chevron-left"
 					id="left"
-					onClick={e => changeProject(e.target.id)}
+					onClick={e => handleManualChange(e.target.id)}
 				></i>
 				<Project
 					key={activeProject}
@@ -62,11 +95,10 @@ const Gallery = () => {
 					id={projectList[activeProject].name}
 					project={projectList[activeProject]}
 				></Project>
-
 				<i
 					className="fa-solid fa-chevron-right"
 					id="right"
-					onClick={e => changeProject(e.target.id)}
+					onClick={e => handleManualChange(e.target.id)}
 				></i>
 			</div>
 		</section>

@@ -159,6 +159,11 @@ h6 {
     flex-direction: column;
   }
 }
+@media (max-width: 600px) {
+  .Project #project-header {
+    padding: 50px 30px;
+  }
+}
 .Project #project-header h1 {
   width: 100%;
   color: #b2bcff;
@@ -218,7 +223,8 @@ h6 {
 .Project #project-header ul li {
   list-style: none;
   font-style: italic;
-  text-shadow: 0px 0px 10px rgba(178, 188, 255, 0.5);
+  text-shadow: 0px 0px 10px rgba(169, 70, 118, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   border-radius: 5px;
   color: #b2bcff;
   padding: 1px 7px;
@@ -242,12 +248,20 @@ h6 {
   font-weight: 900;
   text-align: end;
   color: #b2bcff;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 4px 8px;
+  border-radius: 10px;
   text-shadow: 3px 3px 10px #a94676;
 }
 @media (max-width: 1000px) {
   .Project #project-header #desc h3 {
     font-size: 22px;
     text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .Project #project-header #desc h3 {
+    margin: 30px;
   }
 }
 .Project #project-header #desc p {
@@ -260,6 +274,9 @@ h6 {
   font-size: 18px;
   color: #b2bcff;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 4px 8px;
+  border-radius: 10px;
 }
 @media (max-width: 1000px) {
   .Project #project-header #desc p {
@@ -270,6 +287,7 @@ h6 {
   .Project #project-header #desc p {
     text-align: center;
     width: 100%;
+    margin: 30px;
   }
 }
 .Project #project-header #desc p::before {
@@ -280,7 +298,7 @@ h6 {
   position: absolute;
   right: -3%;
   bottom: -10px;
-  box-shadow: 3px 3px 10px 0 rgba(169, 70, 118, 0.2);
+  box-shadow: 3px 3px 10px 0 rgba(178, 188, 255, 0.2);
   border-radius: 5px;
 }
 @media (max-width: 600px) {
@@ -296,7 +314,7 @@ h6 {
   position: absolute;
   right: -3%;
   bottom: -10px;
-  box-shadow: 3px 3px 10px 0 rgba(169, 70, 118, 0.2);
+  box-shadow: 3px 3px 10px 0 rgba(178, 188, 255, 0.2);
   border-radius: 5px;
 }
 @media (max-width: 600px) {

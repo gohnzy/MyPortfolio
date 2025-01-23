@@ -37,10 +37,10 @@ const Skills = () => {
 				<div id="whiteDiv"></div>
 			</h3>
 			<div id="commercial" className="category">
-				<h4>General</h4>
+				<h4>Général</h4>
 				<div id="relational" className="skillblock">
 					<ul>
-						<li>Methode AGILE</li>
+						<li>Méthode AGILE</li>
 						<li>Gestion de projet</li>
 						<li>Relation client</li>
 						<li>Communication digitale</li>
@@ -49,11 +49,11 @@ const Skills = () => {
 					<ul>
 						<h5>Langues :</h5>
 						<li>
-							Français (maternel)
+							Français (Maternel)
 							<div id="fr-lvl"></div>
 						</li>
 						<li>
-							Anglais (billingue)
+							Anglais (Billingue)
 							<div id="en-lvl"></div>
 						</li>
 						<li>
@@ -64,7 +64,7 @@ const Skills = () => {
 				</div>
 			</div>
 			<div id="code" className="category">
-				<h4>Developpement</h4>
+				<h4>Développement</h4>
 				<div id="frontend" className="skillblock">
 					<div id="js" className="element">
 						<h6>JavaScript</h6>

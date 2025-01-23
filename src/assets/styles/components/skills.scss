@@ -36,8 +36,15 @@
 		height: 100%;
 		margin: auto 0;
 	}
+	& h6 {
+		text-shadow: 3px 3px 10px rgba($color: $blue, $alpha: 0.5);
+	}
 	.category {
-		@include Card;
+		border-radius: 15px;
+		background-color: $venetian-red;
+		box-shadow: 3px 3px 10px 0 rgba($color: #000000, $alpha: 0.2);
+		padding: 30px;
+		box-sizing: border-box;
 		display: grid;
 		grid-template-columns: 64% 30%;
 		grid-template-rows: 10% 90%;
@@ -77,6 +84,7 @@
 		& h4 {
 			grid-column: 1/3;
 			grid-row: 1/2;
+			text-shadow: 3px 3px 10px rgba($color: $contrast-red, $alpha: 1);
 			&::after {
 				content: '';
 				width: 0;
@@ -89,7 +97,7 @@
 		& .skillblock {
 			padding: 30px 0 0 0;
 			border: 15px solid rgba($color: $blue, $alpha: 1);
-			box-shadow: 1px 1px 10px 3px rgba($color: #000000, $alpha: 0.02);
+			box-shadow: 3px 3px 10px 5px rgba($color: $contrast-red, $alpha: 0.5);
 			background-color: white;
 			border-radius: 10px;
 			box-sizing: border-box;

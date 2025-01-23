@@ -17,6 +17,18 @@ main {
     padding: 0;
   }
 }
+@media (max-width: 800px) {
+  main {
+    width: 85%;
+    padding: 0;
+  }
+}
+@media (max-width: 620px) {
+  main {
+    width: 90%;
+    padding: 0;
+  }
+}
 
 section {
   margin: auto;
@@ -131,14 +143,21 @@ h6 {
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
   padding: 30px;
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2%;
+  position: relative;
 }
 .project #bg {
   display: none;
+}
+@media (max-width: 1100px) {
+  .project {
+    gap: 10px;
+    padding-top: 20px;
+  }
 }
 .project:hover {
   cursor: pointer;
@@ -152,28 +171,6 @@ h6 {
   color: #a94676;
   text-shadow: 0;
 }
-.project:hover ul {
-  animation: closeList 0.2s ease-in-out forwards;
-}
-.project:hover li {
-  animation: closeList 0.2s ease-in-out forwards;
-}
-@keyframes closeList {
-  99% {
-    height: 0;
-  }
-  100% {
-    display: none;
-  }
-}
-.project:hover h5 {
-  animation: showText 0.15s ease 1s forwards;
-}
-@keyframes showText {
-  to {
-    opacity: 1;
-  }
-}
 .project:not(:hover) {
   transition: 0.2s ease-in-out;
 }
@@ -182,12 +179,10 @@ h6 {
   text-shadow: 3px 3px 10px #a94676;
   font-size: 24px;
 }
-.project h5 {
-  opacity: 0;
-  color: #a94676;
-  font-size: 16px;
-  margin-top: 15px;
-  text-shadow: 3px 3px 10px rgba(113, 2, 12, 0.2);
+@media (max-width: 420px) {
+  .project h4 {
+    font-size: 18px;
+  }
 }
 .project .img-container {
   background-color: white;
@@ -232,7 +227,27 @@ h6 {
   align-items: start;
   width: 100%;
   gap: 35px;
-  padding-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  flex-wrap: wrap;
+}
+.project ul.move-right {
+  transform: translateX(calc(100% - 100px)) scale(1.2);
+}
+@media (max-width: 1100px) {
+  .project ul.move-right {
+    transform: translateX(calc(100% - 130px)) scale(1.2);
+  }
+}
+@media (max-width: 420px) {
+  .project ul {
+    gap: 10px;
+  }
+}
+.project ul.move-left {
+  transform: translateX(0);
 }
 .project ul li {
   list-style: none;
@@ -241,6 +256,12 @@ h6 {
   padding: 0px 10px;
   border-radius: 5px;
   height: 24px;
-  overflow: hidden;
-  border: 1px solid #71020c;
+}
+@media (max-width: 420px) {
+  .project ul li {
+    padding: 0px 5px;
+    font-size: 14px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }/*# sourceMappingURL=project.css.map */

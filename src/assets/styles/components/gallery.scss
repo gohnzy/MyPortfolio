@@ -24,6 +24,7 @@
 		@media (max-width: 800px) {
 			gap: 20px;
 			height: fit-content;
+			overflow: visible;
 		}
 		@media (max-width: 500px) {
 			gap: 20px;
@@ -31,7 +32,8 @@
 
 		& article {
 			width: 600px;
-			height: 520px;
+			height: fit-content;
+			max-height: 500px;
 			@media (max-width: 900px) {
 				width: 500px;
 			}
