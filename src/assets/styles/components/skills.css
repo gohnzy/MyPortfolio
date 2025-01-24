@@ -325,4 +325,16 @@ h6 {
 #skills .category .skillblock .element .graph {
   width: 150px;
   height: 150px;
+}
+@media (max-width: 420px) {
+  #skills .category .skillblock .element .graph {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 380px) {
+  #skills .category .skillblock .element .graph {
+    width: 110px;
+    height: 110px;
+  }
 }/*# sourceMappingURL=skills.css.map */

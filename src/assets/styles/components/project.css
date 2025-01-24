@@ -159,6 +159,12 @@ h6 {
     padding-top: 20px;
   }
 }
+@media (max-width: 600px) {
+  .project {
+    padding: 15px;
+    padding-top: 10px;
+  }
+}
 .project:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -226,6 +232,8 @@ h6 {
   justify-content: start;
   align-items: start;
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
   gap: 35px;
   padding: 0;
   box-sizing: border-box;
@@ -244,6 +252,7 @@ h6 {
 @media (max-width: 420px) {
   .project ul {
     gap: 10px;
+    margin: 0;
   }
 }
 .project ul.move-left {
