@@ -159,7 +159,6 @@ h6 {
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-  overflow: hidden;
 }
 @media (max-width: 1000px) {
   #gallery #projects-gallery {
@@ -170,7 +169,6 @@ h6 {
   #gallery #projects-gallery {
     height: -moz-fit-content;
     height: fit-content;
-    overflow: visible;
   }
 }
 @media (max-width: 500px) {
