@@ -89,6 +89,10 @@
 		position: relative;
 		transition: transform 0.2s ease-in-out;
 		flex-wrap: wrap;
+		@media (max-width: 700px) {
+			gap: 00px;
+			margin: 0;
+		}
 		@media (max-width: 420px) {
 			gap: 10px;
 			margin: 0;

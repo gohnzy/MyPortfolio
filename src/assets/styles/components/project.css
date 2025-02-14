@@ -242,6 +242,12 @@ h6 {
   transition: transform 0.2s ease-in-out;
   flex-wrap: wrap;
 }
+@media (max-width: 700px) {
+  .project ul {
+    gap: 0px;
+    margin: 0;
+  }
+}
 @media (max-width: 420px) {
   .project ul {
     gap: 10px;
