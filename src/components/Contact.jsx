@@ -12,7 +12,7 @@ const Contact = () => {
 	const form = useRef(null);
 	const [incorrectField, setIncorrectField] = useState([]);
 	const [isHighlighted, setIsHighlighted] = useState(false);
-	const [formSubmission, setFormSubmission] = useState('submitted');
+	const [formSubmission, setFormSubmission] = useState('idle');
 	const [formData, setFormData] = useState({
 		name: '',
 		firstname: '',

@@ -162,8 +162,19 @@ h6 {
   #gallery a {
     left: 50%;
     transform: translateX(-50%);
-    top: 120px;
+    top: 110px;
     right: inherit;
+  }
+}
+@media (max-width: 520px) {
+  #gallery a {
+    top: 100px;
+  }
+}
+@media (max-width: 380px) {
+  #gallery a {
+    width: 40%;
+    text-align: center;
   }
 }
 #gallery a:hover {
