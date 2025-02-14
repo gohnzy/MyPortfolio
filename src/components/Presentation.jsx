@@ -33,24 +33,20 @@ const Presentation = () => {
 	}, []);
 	return (
 		<section id="presentation">
-			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
+			{/* <h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
 				Bonjour !<div id="testo"></div>
-			</h3>
+			</h3> */}
 
 			<div id="presentation-core">
 				<img src="assets/ico.png" alt="portrait" />
-				<p>
-					Hello, moi c'est Greg, 27 ans et jeune développeur web. Après 4 ans
-					dans le monde de l'automobile en tant que commercial, j'ai décidé de
-					me reconvertir en tant que développeur. C'est un univers qui m'a
-					toujours attiré mais que je n'ai réellement découvert que bien trop
-					tard. Enfin, il n'est jamais vraiment "trop tard", n'est-ce pas ?!
-					J'ai donc décidé de sauter le pas et me voilà, fièrement diplôme de la
-					formation "Développeur d'application web" d'OpenClassrooms et prêt à
-					en décoder ! Aujourd'hui, j'ai principalement des compétences en
-					développement frontend mais je suis très interessé par le backend
-					également et je me forme sur le sujet de mon côté.
-				</p>
+				<div id="pres-text">
+					<h4>
+						Grégory <strong>"GohnZy"</strong> Nuzzo Adès
+					</h4>
+					<p>
+						Développeur d'application Web <br /> Spécialisé ReactJS / NodeJS
+					</p>
+				</div>
 			</div>
 		</section>
 	);

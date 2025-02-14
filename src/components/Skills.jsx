@@ -34,7 +34,6 @@ const Skills = () => {
 		<section id="skills">
 			<h3 ref={elementRef} className={isHighlighted ? 'active' : ''}>
 				Mes "Skills".
-				<div id="whiteDiv"></div>
 			</h3>
 			<div id="commercial" className="category">
 				<h4>Général</h4>
@@ -105,7 +104,7 @@ const Skills = () => {
 				</div>
 				<div id="backend" className="skillblock">
 					<div id="node" className="element">
-						<h6>NodeJS / NPM</h6>
+						<h6>NodeJS</h6>
 						<SkillScore level={70} position={4} />
 					</div>
 					<div id="api" className="element">
@@ -113,7 +112,7 @@ const Skills = () => {
 						<SkillScore level={70} position={4} />
 					</div>
 					<div id="sql" className="element">
-						<h6>SQL / Mongo</h6>
+						<h6>SQL / NoSQL</h6>
 						<SkillScore level={70} position={4} />
 					</div>
 				</div>

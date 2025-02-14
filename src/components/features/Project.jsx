@@ -59,7 +59,10 @@ const Project = ({ id, index, project }) => {
 					<li key={index}>{lang}</li>
 				))}
 			</ul>
-			{/* <h5>Cliques pour plus de détails !</h5> */}
+			<i
+				className="fa-solid fa-right-long"
+				style={{ color: '#71020c', fontSize: '22px' }}
+			></i>
 		</article>
 	);
 };

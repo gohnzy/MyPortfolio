@@ -11,7 +11,7 @@ const Header = () => {
 	return (
 		<header>
 			<Nav id="title" to="/">
-				<h1>Gohnzy</h1>
+				<h1>GohnZy</h1>
 				<p>web app developper</p>
 			</Nav>
 
@@ -21,14 +21,14 @@ const Header = () => {
 
 				{page.pathname === '/' ? (
 					<div id="menu" className="hidden">
-						<Link to="presentation" smooth={true} id="toPresentationLink">
-							Presentation
+						<Link to="projects" smooth={true} id="toGalleryLink">
+							Projects
 						</Link>
 						<Link to="skills" smooth={true} id="toSkillsLink">
 							Skills
 						</Link>
-						<Link to="gallery" smooth={true} id="toGalleryLink">
-							Gallery
+						<Link to="contact" smooth={true} id="toContactLink">
+							Contact
 						</Link>
 					</div>
 				) : (

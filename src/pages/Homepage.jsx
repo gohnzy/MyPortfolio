@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Presentation from '../components/Presentation';
 import Skills from '../components/Skills';
 import Gallery from '../components/Gallery';
+import Contact from '../components/Contact';
 import '../assets/styles/components/loader.css';
 import '../assets/styles/pages/homepage.css';
 import { useEffect, useState } from 'react';
@@ -28,11 +29,15 @@ function Homepage() {
 				<Element name="presentation">
 					<Presentation />
 				</Element>
+				<Element name="projects">
+					<Gallery />
+				</Element>
 				<Element name="skills">
 					<Skills />
 				</Element>
-				<Element name="gallery">
-					<Gallery />
+
+				<Element name="contact">
+					<Contact />
 				</Element>
 			</main>
 			<Footer />

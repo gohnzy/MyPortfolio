@@ -56,7 +56,7 @@ h3 {
 		position: absolute;
 		display: block;
 		top: -8px;
-		animation: topLine 0.8s ease-in-out infinite;
+		animation: topLine 0.8s ease-in-out 2 forwards;
 		@keyframes topLine {
 			0% {
 				transform: scaleX(0);
@@ -87,7 +87,7 @@ h3 {
 		background-color: $contrast-red;
 		position: absolute;
 		display: block;
-		animation: botLine 0.8s ease-in-out infinite;
+		animation: botLine 0.8s ease-in-out 2 forwards;
 		@keyframes botLine {
 			0% {
 				transform: scaleX(0);

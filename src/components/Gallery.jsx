@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import projectList from '../data/projectlist';
 import '../assets/styles/components/gallery.css';
 import Project from './features/Project';
@@ -24,18 +25,17 @@ const Gallery = () => {
 		}, 500);
 	};
 
-	// Gestion de l'auto-défilement
-	// useEffect(() => {
-	// 	if (isPaused) return;
+	useEffect(() => {
+		if (isPaused) return;
 
-	// 	const interval = setInterval(() => {
-	// 		setActiveProject(prev =>
-	// 			prev === projectList.length - 1 ? 0 : prev + 1,
-	// 		);
-	// 	}, 3000);
+		const interval = setInterval(() => {
+			setActiveProject(prev =>
+				prev === projectList.length - 1 ? 0 : prev + 1,
+			);
+		}, 3000);
 
-	// 	return () => clearInterval(interval);
-	// }, [isPaused]);
+		return () => clearInterval(interval);
+	}, [isPaused]);
 
 	// Pause automatique pendant 5 secondes
 	const handlePause = () => {
@@ -61,18 +61,23 @@ const Gallery = () => {
 		const handleScroll = () => {
 			if (!elementRef.current) return;
 
+			// Obtenir la position de l'élément
 			const rect = elementRef.current.getBoundingClientRect();
 			const middleOfScreen = window.innerHeight / 2;
 
-			if (rect.top <= middleOfScreen) {
+			const endOfVisibility = window.innerHeight / 30;
+			// Vérifier si le haut de l'élément atteint le milieu de l'écran
+			if (rect.top <= middleOfScreen && rect.top >= endOfVisibility) {
 				setIsHighlighted(true);
 			} else {
 				setIsHighlighted(false);
 			}
 		};
 
+		// Écouter l'événement de défilement
 		window.addEventListener('scroll', handleScroll);
 
+		// Nettoyer l'événement de défilement lorsque le composant est démonté
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
@@ -101,6 +106,7 @@ const Gallery = () => {
 					onClick={e => handleManualChange(e.target.id)}
 				></i>
 			</div>
+			<Link to="/gallery">Voir tous les projets</Link>
 		</section>
 	);
 };

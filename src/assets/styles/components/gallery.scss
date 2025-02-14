@@ -1,8 +1,41 @@
 @import '../index';
 
 #gallery {
+	& a {
+		text-decoration: none;
+		position: absolute;
+		right: 0;
+		top: 82px;
+		color: $blue;
+		background-color: $venetian-red;
+		text-shadow: 3px 3px 10px rgba($color: $contrast-red, $alpha: 1);
+		padding: 10px 20px;
+		border-radius: 10px;
+		font-size: 14px;
+		box-shadow: 3px 3px 10px 0 rgba($color: $venetian-red, $alpha: 0.4);
+		@media (max-width: 1100px) {
+			left: 50%;
+			transform: translateX(-50%);
+			top: 120px;
+			right: inherit;
+		}
+		&:hover {
+			@media (max-width: 1100px) {
+				transform: translate(-50%);
+			}
+			transform: scale(1.05);
+			transition: 0.2s ease-in-out;
+			box-shadow: 3px 3px 10px 0 rgba($color: $venetian-red, $alpha: 0.6);
+		}
+		&:not(:hover) {
+			transition: 0.1s;
+		}
+	}
 	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 80px;
 	height: fit-content;
+	position: relative;
 	@media (max-width: 1100px) {
 		padding-top: 30px;
 		display: flex;
@@ -78,5 +111,16 @@
 				transition: 0.1s ease-in-out;
 			}
 		}
+	}
+	&::after {
+		content: '';
+		background-color: $contrast-red;
+		width: 40%;
+		height: 2px;
+		position: absolute;
+		bottom: -1px;
+		left: 30%;
+		box-shadow: 2px 2px 10px 0 rgba($color: $venetian-red, $alpha: 0.5);
+		border-radius: 5px;
 	}
 }

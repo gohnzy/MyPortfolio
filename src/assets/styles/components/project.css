@@ -66,7 +66,7 @@ h3.active::before {
   position: absolute;
   display: block;
   top: -8px;
-  animation: topLine 0.8s ease-in-out infinite;
+  animation: topLine 0.8s ease-in-out 2 forwards;
 }
 @keyframes topLine {
   0% {
@@ -96,7 +96,7 @@ h3.active::after {
   background-color: #a94676;
   position: absolute;
   display: block;
-  animation: botLine 0.8s ease-in-out infinite;
+  animation: botLine 0.8s ease-in-out 2 forwards;
 }
 @keyframes botLine {
   0% {
@@ -177,6 +177,9 @@ h6 {
   color: #a94676;
   text-shadow: 0;
 }
+.project:hover .img-container {
+  border: 3px solid #71020c;
+}
 .project:not(:hover) {
   transition: 0.2s ease-in-out;
 }
@@ -239,22 +242,11 @@ h6 {
   transition: transform 0.2s ease-in-out;
   flex-wrap: wrap;
 }
-.project ul.move-right {
-  transform: translateX(calc(100% - 100px)) scale(1.2);
-}
-@media (max-width: 1100px) {
-  .project ul.move-right {
-    transform: translateX(calc(100% - 130px)) scale(1.2);
-  }
-}
 @media (max-width: 420px) {
   .project ul {
     gap: 10px;
     margin: 0;
   }
-}
-.project ul.move-left {
-  transform: translateX(0);
 }
 .project ul li {
   list-style: none;
@@ -263,6 +255,8 @@ h6 {
   padding: 0px 10px;
   border-radius: 5px;
   height: 24px;
+  border: 2px solid #71020c;
+  box-shadow: 5px 5px 10px 3px rgba(113, 2, 12, 0.2);
 }
 @media (max-width: 420px) {
   .project ul li {
@@ -271,4 +265,14 @@ h6 {
     height: -moz-fit-content;
     height: fit-content;
   }
+}
+.project i.fa-eye {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+.project i.fa-right-long {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
 }/*# sourceMappingURL=project.css.map */
