@@ -187,11 +187,18 @@
 		text-shadow: 5px 5px 5px rgba($color: $blue, $alpha: 0.5);
 		text-align: center;
 		position: relative;
+		@media (max-width: 1100px) {
+			font-size: 24px;
+			width: 500px;
+		}
 		@media (max-width: 730px) {
 			height: 670px;
+			font-size: 22px;
+			width: 400px;
 		}
 		@media (max-width: 530px) {
 			height: 677px;
+			width: 300px;
 		}
 		& button {
 			position: absolute;
