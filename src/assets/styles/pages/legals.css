@@ -137,36 +137,84 @@ h6 {
   color: #a94676;
 }
 
-#loader-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+#legals header nav:hover #menu {
+  height: 20px;
 }
-#loader-container .loader {
-  width: 150px;
-  aspect-ratio: 9;
-  background: linear-gradient(45deg, #71020c 50%, rgba(0, 0, 0, 0) 0), linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, #71020c 0), linear-gradient(-45deg, #a94676 50%, rgba(0, 0, 0, 0) 0), linear-gradient(-45deg, rgba(0, 0, 0, 0) 50%, #a94676 0), linear-gradient(#b2bcff 0 0);
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  animation: l18 1.5s infinite;
+#legals header nav:hover h2::before {
+  width: 2vw;
+  left: 100px;
+  transform: rotate(90deg) translateX(55px);
 }
-@keyframes l18 {
-  0% {
-    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+#legals header nav:hover h2::after {
+  width: 2vw;
+  right: 100px;
+  transform: rotate(-90deg) translateX(-55px);
+}
+#legals #legals-core {
+  width: 60%;
+  overflow: hidden;
+  margin: 100px auto;
+  background-color: #71020c;
+  box-shadow: 3px 3px 10px 3px rgba(113, 2, 12, 0.5);
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+@media (max-width: 1100px) {
+  #legals #legals-core {
+    width: 80%;
   }
-  25% {
-    background-position: 0 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%;
+}
+@media (max-width: 800px) {
+  #legals #legals-core {
+    width: 90%;
   }
-  50% {
-    background-position: 0 100%, 100% 0, 100% 100%, 0 0, 50% 50%;
+}
+@media (max-width: 600px) {
+  #legals #legals-core {
+    padding: 30px;
   }
-  75% {
-    background-position: 50% 50%, 50% 50%, 100% 100%, 0 0, 50% 50%;
+}
+#legals #legals-core #legals-chapters {
+  background-color: white;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  box-shadow: 3px 3px 10px 3px rgba(178, 188, 255, 0.5);
+}
+@media (max-width: 600px) {
+  #legals #legals-core #legals-chapters {
+    padding: 30px;
   }
-  100% {
-    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+}
+#legals #legals-core #legals-chapters h4 {
+  text-shadow: 2px 2px 3px rgba(113, 2, 12, 0.1);
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  #legals #legals-core #legals-chapters h4 {
+    font-size: 16px;
   }
-}/*# sourceMappingURL=loader.css.map */
+}
+#legals #legals-core #legals-chapters p {
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  #legals #legals-core #legals-chapters p {
+    font-size: 12px;
+  }
+}
+#legals #legals-core h3 {
+  justify-self: center;
+  text-shadow: 4px 2px 5px rgba(178, 188, 255, 0.5);
+  box-shadow: 3px 3px 10px 3px rgba(178, 188, 255, 0.5);
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  #legals #legals-core h3 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=legals.css.map */

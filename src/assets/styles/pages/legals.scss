@@ -1,0 +1,76 @@
+@import '../index';
+
+#legals {
+	& header {
+		& nav:hover {
+			& #menu {
+				height: 20px;
+			}
+			& h2::before {
+				width: 2vw;
+				left: 100px;
+				transform: rotate(90deg) translateX(55px);
+			}
+			& h2::after {
+				width: 2vw;
+				right: 100px;
+				transform: rotate(-90deg) translateX(-55px);
+			}
+		}
+	}
+	#legals-core {
+		width: 60%;
+		overflow: hidden;
+		margin: 100px auto;
+		background-color: rgba($color: $venetian-red, $alpha: 1);
+		box-shadow: 3px 3px 10px 3px rgba($color: $venetian-red, $alpha: 0.5);
+		padding: 50px;
+		box-sizing: border-box;
+		border-radius: 50px;
+
+		@media (max-width: 1100px) {
+			width: 80%;
+		}
+		@media (max-width: 800px) {
+			width: 90%;
+		}
+		@media (max-width: 600px) {
+			padding: 30px;
+		}
+		& #legals-chapters {
+			background-color: white;
+			padding: 50px;
+			box-sizing: border-box;
+			border-radius: 50px;
+			box-shadow: 3px 3px 10px 3px rgba($color: $blue, $alpha: 0.5);
+			@media (max-width: 600px) {
+				padding: 30px;
+			}
+			& h4 {
+				text-shadow: 2px 2px 3px rgba($color: $venetian-red, $alpha: 0.1);
+				font-size: 20px;
+				@media (max-width: 800px) {
+					font-size: 16px;
+				}
+			}
+			& p {
+				font-size: 14px;
+				@media (max-width: 800px) {
+					font-size: 12px;
+				}
+			}
+		}
+		& h3 {
+			justify-self: center;
+			text-shadow: 4px 2px 5px rgba($color: $blue, $alpha: 0.5);
+			box-shadow: 3px 3px 10px 3px rgba($color: $blue, $alpha: 0.5);
+			background-color: white;
+			padding: 10px 30px;
+			border-radius: 25px;
+			text-align: center;
+			@media (max-width: 800px) {
+				font-size: 20px;
+			}
+		}
+	}
+}

@@ -137,36 +137,45 @@ h6 {
   color: #a94676;
 }
 
-#loader-container {
-  width: 100vw;
-  height: 100vh;
+#cookies-banner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 30px 0;
+  background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  border: 5px solid #71020c;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px 5px rgba(113, 2, 12, 0.3);
 }
-#loader-container .loader {
-  width: 150px;
-  aspect-ratio: 9;
-  background: linear-gradient(45deg, #71020c 50%, rgba(0, 0, 0, 0) 0), linear-gradient(45deg, rgba(0, 0, 0, 0) 50%, #71020c 0), linear-gradient(-45deg, #a94676 50%, rgba(0, 0, 0, 0) 0), linear-gradient(-45deg, rgba(0, 0, 0, 0) 50%, #a94676 0), linear-gradient(#b2bcff 0 0);
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-  animation: l18 1.5s infinite;
+#cookies-banner p {
+  color: #71020c;
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
 }
-@keyframes l18 {
-  0% {
-    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-  }
-  25% {
-    background-position: 0 100%, 100% 0, 50% 50%, 50% 50%, 50% 50%;
-  }
-  50% {
-    background-position: 0 100%, 100% 0, 100% 100%, 0 0, 50% 50%;
-  }
-  75% {
-    background-position: 50% 50%, 50% 50%, 100% 100%, 0 0, 50% 50%;
-  }
-  100% {
-    background-position: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
-  }
-}/*# sourceMappingURL=loader.css.map */
+#cookies-banner #buttons-div {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+#cookies-banner #buttons-div button {
+  padding: 5px 15px;
+  background-color: #71020c;
+  color: #b2bcff;
+  border: 2px solid #a94676;
+  box-shadow: 1px 1px 5px 3px rgba(178, 188, 255, 0.2);
+  border-radius: 15px;
+}
+#cookies-banner #buttons-div button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
+#cookies-banner #buttons-div button:not(:hover) {
+  transition: 0.1s;
+}/*# sourceMappingURL=cookies.css.map */

@@ -23,7 +23,6 @@ const ProjectPage = () => {
 				iframeRef.current.src = iframeRef.current.src;
 			}
 		} else {
-			setViewerLoading(true);
 			setTimeout(() => {
 				setViewerLoading(false);
 			}, 1500);
@@ -95,7 +94,7 @@ const ProjectPage = () => {
 								{displayViewer && (
 									<button id="viewer-loader" onClick={viewerButton}>
 										<i
-											class="fa-solid fa-rotate-right"
+											className="fa-solid fa-rotate-right"
 											style={{ color: '#b2bcff' }}
 										></i>
 									</button>

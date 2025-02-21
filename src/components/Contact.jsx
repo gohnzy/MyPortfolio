@@ -14,17 +14,20 @@ const Contact = () => {
 	const [isHighlighted, setIsHighlighted] = useState(false);
 	const [formSubmission, setFormSubmission] = useState('idle');
 	const [formData, setFormData] = useState({
+		lastname: '',
 		name: '',
-		firstname: '',
 		company: '',
 		email: '',
 		message: '',
+		consent: '',
 	});
 	const elementRef = useRef();
 	const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
+	const changeConsentState = e => {
+		e.target.checked ? (formData.consent = 'checked') : (formData.consent = '');
+	};
 	const updateFormData = e => {
-		if ((e.target.name === 'email') & !emailRegex.test(e.target.value)) {
+		if (e.target.name === 'email' && !emailRegex.test(e.target.value)) {
 			console.log('Email au mauvais format');
 		} else {
 			setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,7 +36,6 @@ const Contact = () => {
 	const formControl = event => {
 		event.preventDefault();
 		let errors = [];
-
 		Object.keys(formData).forEach(key => {
 			if (formData[key].trim() === '') {
 				if (key !== 'company') {
@@ -41,11 +43,14 @@ const Contact = () => {
 				}
 			}
 		});
+
 		setIncorrectField(errors);
 
 		if (errors.length > 0) {
+			console.log(errors);
 		} else {
 			setFormSubmission('loading');
+			setIncorrectField([]);
 			const sendToUser = emailjs.send(
 				service_ID,
 				template_user,
@@ -58,14 +63,16 @@ const Contact = () => {
 				formData,
 				public_key,
 			);
+
 			Promise.all([sendToUser, sendToOwner])
 				.then(() => {
 					setFormData({
+						lastname: '',
 						name: '',
-						firstname: '',
 						company: '',
 						email: '',
 						message: '',
+						consent: '',
 					});
 					setFormSubmission('submitted');
 				})
@@ -74,6 +81,7 @@ const Contact = () => {
 				});
 		}
 	};
+
 	useEffect(() => {
 		const handleScroll = () => {
 			if (!elementRef.current) return;
@@ -91,10 +99,8 @@ const Contact = () => {
 			}
 		};
 
-		// Écouter l'événement de défilement
 		window.addEventListener('scroll', handleScroll);
 
-		// Nettoyer l'événement de défilement lorsque le composant est démonté
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
@@ -113,16 +119,16 @@ const Contact = () => {
 					onSubmit={formControl}
 				>
 					<div className="input-group" id="form-email">
-						{incorrectField.includes('firstname') ? (
-							<label htmlFor="firstname">
+						{incorrectField.includes('email') ? (
+							<label htmlFor="email">
 								E-Mail *{' '}
 								<strong>Merci de renseigner une adresse mail valide</strong>
 							</label>
 						) : (
-							<label htmlFor="firstname">E-Mail *</label>
+							<label htmlFor="email">E-Mail *</label>
 						)}
 						<input
-							type="text"
+							type="email"
 							name="email"
 							placeholder="E-Mail *"
 							onChange={updateFormData}
@@ -140,14 +146,33 @@ const Contact = () => {
 							onChange={updateFormData}
 						/>
 					</div>
-					<div className="input-group" id="form-name">
-						{incorrectField.includes('firstname') ? (
-							<label htmlFor="firstname">
+					<div className="input-group" id="form-lastname">
+						{incorrectField.includes('lastname') ? (
+							<label htmlFor="lastname">
 								Nom * <strong>Merci de renseigner votre nom</strong>
 							</label>
 						) : (
-							<label htmlFor="firstname">Nom *</label>
+							<label htmlFor="lastname">Nom *</label>
 						)}
+						<input
+							type="text"
+							name="lastname"
+							placeholder="Last Name *"
+							onChange={updateFormData}
+							className={
+								incorrectField.includes('lastname') ? 'incorrect-field' : ''
+							}
+						/>
+					</div>
+					<div className="input-group" id="form-name">
+						{incorrectField.includes('name') ? (
+							<label htmlFor="name">
+								Prénom * <strong>Merci de renseigner votre prénom</strong>
+							</label>
+						) : (
+							<label htmlFor="name">Prénom *</label>
+						)}
+
 						<input
 							type="text"
 							name="name"
@@ -158,33 +183,14 @@ const Contact = () => {
 							}
 						/>
 					</div>
-					<div className="input-group" id="form-firstname">
-						{incorrectField.includes('firstname') ? (
-							<label htmlFor="firstname">
-								Prénom * <strong>Merci de renseigner votre prénom</strong>
-							</label>
-						) : (
-							<label htmlFor="firstname">Prénom *</label>
-						)}
-
-						<input
-							type="text"
-							name="firstname"
-							placeholder="Firstname *"
-							onChange={updateFormData}
-							className={
-								incorrectField.includes('firstname') ? 'incorrect-field' : ''
-							}
-						/>
-					</div>
 					<div className="input-group" id="form-message">
-						{incorrectField.includes('firstname') ? (
-							<label htmlFor="firstname">
-								Prénom *{' '}
+						{incorrectField.includes('message') ? (
+							<label htmlFor="message">
+								Message *
 								<strong>Merci de m'écrire un petit mot &#128512;</strong>
 							</label>
 						) : (
-							<label htmlFor="firstname">Prénom *</label>
+							<label htmlFor="message">Message *</label>
 						)}
 						<textarea
 							type="text-area"
@@ -196,6 +202,26 @@ const Contact = () => {
 							}
 						/>
 					</div>
+					<div className="input-group" id="form-consent">
+						<input
+							type="checkbox"
+							id="consent"
+							onChange={changeConsentState}
+							name="consent"
+						/>
+						{incorrectField.includes('consent') ? (
+							<label htmlFor="consent" className="noChecked">
+								<span className="checkmark"></span>
+								J'accepte les <a href="/legals">conditions d'utilisation</a>.
+							</label>
+						) : (
+							<label htmlFor="consent">
+								<span className="checkmark"></span>
+								J'accepte les <a href="/legals">conditions d'utilisation</a>.
+							</label>
+						)}
+					</div>
+
 					{formSubmission === 'loading' ? (
 						<div id="submitting-form"></div>
 					) : (

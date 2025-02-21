@@ -1,0 +1,48 @@
+@import '../index';
+
+#cookies-banner {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 30px 0;
+	// background-color: rgba($color: $venetian-red, $alpha: 0.85);
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	border: 5px solid $venetian-red;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px 5px rgba($color: $venetian-red, $alpha: 0.3);
+	& p {
+		color: $venetian-red;
+		font-size: 20px;
+		width: 60%;
+		text-align: center;
+	}
+
+	& #buttons-div {
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+
+		& button {
+			padding: 5px 15px;
+			background-color: $venetian-red;
+			color: $blue;
+			border: 2px solid $contrast-red;
+			box-shadow: 1px 1px 5px 3px rgba($color: $blue, $alpha: 0.2);
+			border-radius: 15px;
+
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.1);
+				transition: 0.1s ease-in-out;
+			}
+			&:not(:hover) {
+				transition: 0.1s;
+			}
+		}
+	}
+}
