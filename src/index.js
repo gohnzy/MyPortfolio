@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage';
 import Project from './pages/Project';
 import Gallery from './pages/Gallery';
 import Legals from './pages/Legals';
+import NotFound from './pages/NotFound';
 
 import './assets/styles/index.css';
 
@@ -31,6 +32,7 @@ const App = () => {
 					<Route path="/project/:id" element={<Project />} />
 					<Route path="/gallery" element={<Gallery />} />
 					<Route path="/legals" element={<Legals />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Router>
 		</>

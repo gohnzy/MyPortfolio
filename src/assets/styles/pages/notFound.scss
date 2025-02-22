@@ -1,0 +1,29 @@
+@import '../index';
+
+#not-found {
+	position: relative;
+	height: 100%;
+
+	& footer {
+		position: fixed;
+		bottom: 0;
+	}
+	& #not-found-core {
+		margin: auto;
+		width: 60%;
+		text-align: center;
+		padding-top: 150px;
+		box-sizing: border-box;
+		& h1 {
+			font-size: 48px;
+			color: $venetian-red;
+
+			@media (max-width: 600px) {
+				font-size: 40px;
+			}
+			@media (max-width: 400px) {
+				font-size: 32px;
+			}
+		}
+	}
+}
