@@ -17,6 +17,7 @@
 		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^13.5.0",
+		"@vercel/analytics": "^1.5.0",
 		"abortcontroller-polyfill": "^1.7.6",
 		"axios": "^1.7.8",
 		"concurrently": "^9.1.0",
@@ -38,6 +39,7 @@
 		"react-scripts": "5.0.1",
 		"react-scroll": "^1.9.0",
 		"recharts": "^2.13.3",
+		"vercel": "^41.6.2",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
@@ -63,5 +65,8 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"typescript": "^5.8.3"
 	}
 }
